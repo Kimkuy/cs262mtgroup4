@@ -41,6 +41,15 @@
     </div>
   </div>
 </nav>
+
+@auth
+        <form action="/logout" method="POST" class="d-inline m-0">
+            @csrf
+            <button type="submit" class="btn btn-sm btn-outline-danger ms-2">Logout</button>
+        </form>
+    @else
+        <a class="btn btn-sm btn-outline-secondary ms-2" href="/signup">Sign up/Login</a>
+    @endauth
     
 </body>
 </html>
