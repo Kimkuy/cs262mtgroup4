@@ -27,7 +27,7 @@
                             <input type="password" name="password" class="mt-2 form-control" placeholder="Password">
                             <input type="password" name="password_confirmation" class="mt-2 form-control" placeholder="Repeat Password">
                             <input type="text" name="email" class="my-2 form-control" placeholder="E-mail">
-                            <br>
+                            <br><br>
                             <button type="submit" name="submit" class="btn btn-primary my-2">SIGN UP</button>
                         </form>
                 </div> 
@@ -40,7 +40,7 @@
                           @csrf
                             <input type="text" name="loginname" placeholder="Username">
                             <input type="password" name="loginpassword" placeholder="Password">
-                            <br>
+                            <br><br>
                             <button type="submit" name="submit" class="btn btn-primary my-2">LOGIN</button>
                         </form>
 
