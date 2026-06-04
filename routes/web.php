@@ -8,6 +8,7 @@ use App\Http\Controllers\PostController;
 Route::get('/', function () { return view('homepage');});
 Route::get('/signup', function () { return view('signup');});
 Route::get('/index', function () { return view('index');});
+// Route::get('/layout', function () { return view('layout');});
 
 Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
