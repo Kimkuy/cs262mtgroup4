@@ -58,7 +58,7 @@
                                 <button class="breakdance-menu-close-button" type="button">Close</button>
                             </li>
                             <li class="breakdance-menu-item-1744-105 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="https://esports.org.sg" target="_self" data-type="url">Home</a>
+                                <a class="breakdance-link breakdance-menu-link" href="{{ url('/index') }}" target="_self" data-type="url">Home</a>
                             </li>
                             <li class="bde-menu-dropdown-1744-106 bde-menu-dropdown breakdance-menu-item">
                                 <div class="breakdance-dropdown">
@@ -73,21 +73,21 @@
                                                     <div class="breakdance-dropdown-column">
                                                         <ul class="breakdance-dropdown-links">
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/about/" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Who We Are</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/about/executive-committee" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Our Executive Committee</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/about/policies-handbook" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Policies &amp; Handbook</span>
                                                                     </span>
@@ -103,10 +103,10 @@
                                 </div>
                             </li>
                             <li class="breakdance-menu-item-1744-109 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="https://esports.org.sg/merchandise/" target="_self" data-type="url">Merchandise</a>
+                                <a class="breakdance-link breakdance-menu-link" href="#" target="_self" data-type="url">Merchandise</a>
                             </li>
                             <li class="breakdance-menu-item-1744-110 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="https://esports.org.sg/newsroom" target="_self" data-type="url">The News</a>
+                                <a class="breakdance-link breakdance-menu-link" href="#" target="_self" data-type="url">The News</a>
                             </li>
                             <li class="bde-menu-dropdown-1744-107 bde-menu-dropdown breakdance-menu-item">
                                 <div class="breakdance-dropdown">
@@ -121,21 +121,21 @@
                                                     <div class="breakdance-dropdown-column">
                                                         <ul class="breakdance-dropdown-links">
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/high-performance/national-training-centre" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">MPL KH</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/high-performance/major-games" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Angkor Warriors</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/high-performance/achievements" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Achievements</span>
                                                                     </span>
@@ -163,21 +163,21 @@
                                                     <div class="breakdance-dropdown-column">
                                                         <ul class="breakdance-dropdown-links">
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/membership/members" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Mobile Device</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/membership/join-sgea" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">PC</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="https://esports.org.sg/calendar/" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Console</span>
                                                                     </span>
@@ -193,7 +193,7 @@
                                 </div>
                             </li>
                             <li class="breakdance-menu-item-1744-111 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="https://esports.org.sg/contact" target="_self" data-type="url">Contact</a>
+                                <a class="breakdance-link breakdance-menu-link" href="#" target="_self" data-type="url">Contact</a>
                             </li>
                         </ul>
                         <span class="breakdance-menu-overlay"></span>

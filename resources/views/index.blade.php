@@ -23,7 +23,7 @@
                                 <p>EFC is a member of the International Esports Federation (IESF), the Asian Electronic Sports Federation (AESF), and the <a href="https://www.globalesports.org/">Global Esports Federation (GEF)</a>.</p>
                             </div>
                         </div><div class="bde-button-1737-107 bde-button">
-                            <a class="breakdance-link button-atom button-atom--primary bde-button__button" href="https://esports.org.sg/about/" target="_self" data-type="url">
+                            <a class="breakdance-link button-atom button-atom--primary bde-button__button" href="#" target="_self" data-type="url">
                                 <span class="button-atom__text">Who We Are</span>
                             </a>
                         </div>
@@ -128,25 +128,25 @@
                             <div class="bde-post-list-1737-122 bde-post-list">
                                 <div class="bde-loop bde-loop-grid ee-posts ee-posts-grid">
                                     <article class="bde-loop-item ee-post">
-                                        <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-top ee-posts-image-top" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/" tabindex="-1">
+                                        <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-top ee-posts-image-top" href="#" tabindex="-1">
                                             <div class="bde-loop-item__image ee-post-image">
                                                 <img width="1200" height="628" src="https://esportsfc.org.kh/wp-content/uploads/2026/05/MPL-Cambodia-season-101.jpg" class="attachment-full size-full wp-post-image" alt="MPL KH S10 the Winner who Qualifiers For EWC in Paris 2026" >
                                             </div>
                                         </a>
                                         <div class="bde-loop-item__wrap ee-post-wrap">
                                             <h3 class="ee-post-title">
-                                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/" tabindex="-1">
+                                                <a class="bde-loop-item__title-link ee-post-title-link" href="#" tabindex="-1">
                                                     MPL KH S10 the Winner who Qualifiers For EWC in Paris 2026                  
                                                 </a>
                                             </h3>
                                                 <div class="bde-loop-item__post-meta ee-post-meta">
                                                     <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
-                                                        <a href="https://esports.org.sg/2026/05/25/">
+                                                        <a href="#">
                                                             May 17, 2026                                    
                                                         </a>
                                                     </span>
                                                     <span class="bde-loop-item__meta-comments bde-loop-item__meta-item ee-post-meta-comments ee-post-meta-item">
-                                                        <a href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/#respond">
+                                                        <a href="#">
                                                             No Comments
                                                         </a>
                                                     </span>
@@ -155,7 +155,7 @@
                                                 <div class="bde-loop-item__content ee-post-content">
                                                     In the round robin competition, Pro Esports performed best by winning all 9 games, earning 9 points, and standing at the top of the table, while CFU Gaming and Vigor Apex won 7 and lost 2, respectively, and were in 2nd and 3rd place, and Galaxy Legends was in 4th place with 6 wins and 3 losses. Team Flash KH won 5 and lost 4, and was in 5th place, while Valhalla was in 6th place with 4 wins and 5 losses.,…
                                                 </div>          
-                                                <a class="breakdance-link button-atom button-atom--custom bde-loop-item__button ee-post-button" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/" target="_self" data-type="url" aria-label="Read more about Singapore to Host Asian Games Esports Events Qualifiers">
+                                                <a class="breakdance-link button-atom button-atom--custom bde-loop-item__button ee-post-button" href="#" target="_self" data-type="url" aria-label="Read more about Singapore to Host Asian Games Esports Events Qualifiers">
                                                     <span class="button-atom__text">Read more</span>
                                                 </a>
                                         </div>
@@ -167,88 +167,88 @@
                                 <div class="bde-post-list-1737-124 bde-post-list">
                                     <div class="bde-loop bde-loop-list ee-posts ee-posts-list">    
                                         <article class="bde-loop-item ee-post">
-                                            <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-left ee-posts-image-left" href="https://esports.org.sg/sea-esports-nations-cup-launch/" tabindex="-1">
+                                            <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-left ee-posts-image-left" href="#" tabindex="-1">
                                                 <div class="bde-loop-item__image ee-post-image">
                                                     <img width="1646" height="926" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFXoQGh447CBHZllDGAA82b1wMbtyK6Z5IrQ&s" class="attachment-full size-full wp-post-image" alt=" Angkor Warrior, who will represent Cambodia in the Mobile Legends: Bang Bang competition at the Asian Games 2026!">
                                                 </div>
                                             </a>
                                             <div class="bde-loop-item__wrap ee-post-wrap">
                                                 <h3 class="ee-post-title">
-                                                    <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/" tabindex="-1">
+                                                    <a class="bde-loop-item__title-link ee-post-title-link" href="#" tabindex="-1">
                                                         Angkor Warrior, who will represent Cambodia in the Mobile Legends: Bang Bang competition at the Asian Games 2026!
                                                     </a>
                                                 </h3>
                                                 <div class="bde-loop-item__post-meta ee-post-meta">
                                                     <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
-                                                        <a href="https://esports.org.sg/2026/04/02/">
+                                                        <a href="'#'">
                                                             April 2, 2026
                                                         </a>
                                                     </span>                                                                   <span class="bde-loop-item__meta-comments bde-loop-item__meta-item ee-post-meta-comments ee-post-meta-item">
-                                                        <a href="https://esports.org.sg/sea-esports-nations-cup-launch/#respond">
+                                                        <a href="#">
                                                             No Comments
                                                         </a>
                                                     </span>
                                                             
                                                 </div>        
-                                                    <a class="breakdance-link button-atom button-atom--custom bde-loop-item__button ee-post-button" href="https://esports.org.sg/sea-esports-nations-cup-launch/" target="_self" data-type="url" aria-label="Read more about SEA Esports Nations Cup Launched: Southeast Asia establishes a structured regional framework for National Team Esports">
+                                                    <a class="breakdance-link button-atom button-atom--custom bde-loop-item__button ee-post-button" href="#" target="_self" data-type="url" aria-label="Read more about SEA Esports Nations Cup Launched: Southeast Asia establishes a structured regional framework for National Team Esports">
                                                         <span class="button-atom__text">Read more</span>
                                                     </a>
                                             </div>
                                         </article>
                                         <article class="bde-loop-item ee-post">
-                                            <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-left ee-posts-image-left" href="https://esports.org.sg/three-ways-singapore-is-levelling-up-its-esports-game/" tabindex="-1">
+                                            <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-left ee-posts-image-left" href="#" tabindex="-1">
                                                 <div class="bde-loop-item__image ee-post-image">
                                                     <img width="1942" height="1032" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLsCucFsTpdCEYU-6ZYpqWbubkuClniP9uLw&s" class="attachment-full size-full wp-post-image" alt="The SEA Esports Nations Cup is coming soon in 4 competition: Crossfire: Legends, Teamfight Tactics, PUBG MOBILE, Total Football">
                                                 </div>
                                             </a>
                                             <div class="bde-loop-item__wrap ee-post-wrap">
                                                 <h3 class="ee-post-title">
-                                                    <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/three-ways-singapore-is-levelling-up-its-esports-game/" tabindex="-1">
+                                                    <a class="bde-loop-item__title-link ee-post-title-link" href="#" tabindex="-1">
                                                         The SEA Esports Nations Cup is coming soon in 4 competition: Crossfire: Legends, Teamfight Tactics, PUBG MOBILE, Total Football
                                                     </a>
                                                 </h3>
                                                 <div class="bde-loop-item__post-meta ee-post-meta">
                                                     <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
-                                                        <a href="https://esports.org.sg/2026/04/01/">
+                                                        <a href="#">
                                                             April 1, 2026
                                                         </a>
                                                     </span>
                                                     <span class="bde-loop-item__meta-comments bde-loop-item__meta-item ee-post-meta-comments ee-post-meta-item">
-                                                        <a href="https://esports.org.sg/three-ways-singapore-is-levelling-up-its-esports-game/#respond">
+                                                        <a href="#">
                                                             No Comments
                                                         </a>
                                                     </span>                
                                                 </div>                  
-                                                <a class="breakdance-link button-atom button-atom--custom bde-loop-item__button ee-post-button" href="https://esports.org.sg/three-ways-singapore-is-levelling-up-its-esports-game/" target="_self" data-type="url" aria-label="Read more about Three Ways Singapore Is Levelling Up Its Esports Game | Singapore Hour">
+                                                <a class="breakdance-link button-atom button-atom--custom bde-loop-item__button ee-post-button" href="#" target="_self" data-type="url" aria-label="Read more about Three Ways Singapore Is Levelling Up Its Esports Game | Singapore Hour">
                                                     <span class="button-atom__text">Read more</span>
                                                 </a>
                                             </div>
                                         </article>
                                         <article class="bde-loop-item ee-post">
-                                            <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-left ee-posts-image-left" href="https://esports.org.sg/sgea-and-mesf-strategic-esports-partnership/" tabindex="-1">
+                                            <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-left ee-posts-image-left" href="#" tabindex="-1">
                                                 <div class="bde-loop-item__image ee-post-image">
-                                                    <img width="1920" height="1080" src="https://esportsfc.org.kh/wp-content/uploads/2026/04/MPL-Cambodia1-1200x652.jpg" class="attachment-full size-full wp-post-image" alt="MPL Cambodia begins 10th season with an unprecedented new look">
+                                                    <img width="1920" height="1080" src="#" class="attachment-full size-full wp-post-image" alt="MPL Cambodia begins 10th season with an unprecedented new look">
                                                 </div>
                                             </a>
                                             <div class="bde-loop-item__wrap ee-post-wrap">
                                                 <h3 class="ee-post-title">
-                                                    <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/sgea-and-mesf-strategic-esports-partnership/" tabindex="-1">
+                                                    <a class="bde-loop-item__title-link ee-post-title-link" href="#" tabindex="-1">
                                                         MPL Cambodia begins 10th season with an unprecedented new look
                                                     </a>
                                                 </h3>
                                                 <div class="bde-loop-item__post-meta ee-post-meta">
                                                     <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
-                                                        <a href="https://esports.org.sg/2026/03/14/">
+                                                        <a href="#">
                                                             March 14, 2026
                                                         </a>
                                                     </span>
                                                     <span class="bde-loop-item__meta-comments bde-loop-item__meta-item ee-post-meta-comments ee-post-meta-item">
-                                                        <a href="https://esports.org.sg/sgea-and-mesf-strategic-esports-partnership/#respond">
+                                                        <a href="#">
                                                             No Comments
                                                         </a>
                                                     </span>                      
                                                 </div>                     
-                                                    <a class="breakdance-link button-atom button-atom--custom bde-loop-item__button ee-post-button" href="https://esports.org.sg/sgea-and-mesf-strategic-esports-partnership/" target="_self" data-type="url" aria-label="Read more about SGEA and MESF Forge Strategic Partnership to Accelerate Cross-Border Esports Development">
+                                                    <a class="breakdance-link button-atom button-atom--custom bde-loop-item__button ee-post-button" href="#" target="_self" data-type="url" aria-label="Read more about SGEA and MESF Forge Strategic Partnership to Accelerate Cross-Border Esports Development">
                                                         <span class="button-atom__text">Read more</span>
                                                     </a>
                                             </div>
@@ -257,22 +257,22 @@
                                 <div class="bde-posts-pagination bde-posts-navigation-numbers bde-posts-navigation-numbers-prev-next">
                                     <div class="bde-posts-prev-next-link"></div>
                                         <ul><li class="bde-posts-navigation-numbers--active">
-                                                <a class="is-active" href="https://esports.org.sg/">1</a></li>
+                                                <a class="is-active" href="#">1</a></li>
                                             <li>
-                                                <a href="https://esports.org.sg/page/2/">2</a>
+                                                <a href="#">2</a>
                                             </li>
                                             <li>
-                                                <a href="https://esports.org.sg/page/3/">3</a>
+                                                <a href="#">3</a>
                                             </li>
                                             <li class="bde-posts-navigation-numbers--ellipses">
                                                 <span>…</span>
                                             </li>
                                             <li>
-                                                <a href="https://esports.org.sg/page/15/">15</a>
+                                                <a href="#">15</a>
                                             </li>
                                         </ul>
                                         <div class="bde-posts-prev-next-link">
-                                            <a href="https://esports.org.sg/page/2/">Next »</a>
+                                            <a href="#">Next »</a>
                                         </div>
                                 </div>
                             </div>
