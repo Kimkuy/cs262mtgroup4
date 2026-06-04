@@ -12,25 +12,26 @@ class UserController extends Controller
             'email' => ['required', 'email', Rule::unique('users','email')],
             'password' => ['required', 'confirmed', 'min:3', 'max:200']
         ]);
-        $incomingFields['password']=bcrypt($incomingFields['password']);
+        $incomingFields['password'] = bcrypt($incomingFields['password']);
         $user = User::create($incomingFields);
         auth()->login($user);
-        return redirect('/');
-        // return redirect('/dashboard');
-        //return redirect('/dashboard/?'.$user);
-
+        return redirect('/dashboard');
     }
+
     public function login(Request $request){
         $incomingFields = $request->validate([
-            'loginname'=>'required',
-            'loginpassword'=>'required'
+            'loginname' => 'required',
+            'loginpassword' => 'required'
         ]);
-        if(auth()->attempt(['name'=> $incomingFields['loginname'], 'password'=> $incomingFields['loginpassword']])){
+
+        if(auth()->attempt(['name' => $incomingFields['loginname'], 'password' => $incomingFields['loginpassword']])){
             $request->session()->regenerate();
+            return redirect('/dashboard');
         }
-        return redirect('/dashboard');
-        
+
+        return back()->withErrors(['loginname' => 'Invalid username or password.']);
     }
+
     public function logout(){
         auth()->logout();
         return redirect('/');
