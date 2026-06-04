@@ -245,15 +245,12 @@
     <div class="section-container"><div class="bde-columns-1737-101 bde-columns"><div class="bde-column-1737-102 bde-column is-animated" data-entrance="slideDown" style="">
     <div class="bde-text-1737-103 bde-text">
         // E-sport Federation Cambodia //
-    </div><h1 class="bde-dual-heading-1737-104 bde-dual-heading">
-            <span data-style="primary" class="dual-heading--primary  ">Glory Of</span>
-            <span data-style="secondary" class="dual-heading--secondary  ">Singapore</span>
-            <span data-style="secondary" class="dual-heading--secondary  ">Esports</span>
-
-
-
-</h1>
-</div><div class="bde-column-1737-105 bde-column is-animated" data-entrance="slideUp" style="">
+        </div><h1 class="bde-dual-heading-1737-104 bde-dual-heading">
+                <span data-style="primary" class="dual-heading--primary  ">Glory Of</span>
+                <span data-style="secondary" class="dual-heading--secondary  ">Cambodia</span>
+                <span data-style="secondary" class="dual-heading--secondary  ">Esports</span>
+            </h1>
+        </div><div class="bde-column-1737-105 bde-column is-animated" data-entrance="slideUp" style="">
   
   
 	
