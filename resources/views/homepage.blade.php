@@ -42,7 +42,7 @@
   </div>
 </nav>
 
-@auth
+  @auth
         <form action="/logout" method="POST" class="d-inline m-0">
             @csrf
             <button type="submit" class="btn btn-sm btn-outline-danger ms-2">Logout</button>
