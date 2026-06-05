@@ -6,6 +6,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 
 Route::get('/', function () { return view('index');});
+Route::get('/about', function () { return view('about');});
+Route::get('/merchandise', function () { return view('merchandise');});
 Route::get('/signup', function () { return view('signup');});
 Route::get('/homepage', function () { return view('homepage');});
 Route::get('/thenews', function () { return view('thenews');});
