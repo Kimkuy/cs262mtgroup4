@@ -193,7 +193,7 @@
                                 </div>
                             </li>
                             <li class="breakdance-menu-item-1744-111 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="#" target="_self" data-type="url">Contact</a>
+                                <a class="breakdance-link breakdance-menu-link" href="/signup" target="_self" data-type="url">Contact</a>
                             </li>
                         </ul>
                         <span class="breakdance-menu-overlay"></span>
