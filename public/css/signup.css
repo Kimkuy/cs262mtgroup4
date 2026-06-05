@@ -1,0 +1,34 @@
+body
+{ 
+background: #959393;
+background: radial-gradient(circle, rgb(44, 42, 42) 0%, rgba(109, 120, 112, 1) 50%, rgba(54, 52, 44, 1) 100%);
+};
+.btn-grad {
+  background: linear-gradient(135deg, #5c74e1, #9b59f7);
+  border: none;
+  color: white;
+}
+
+.btn-grad {
+  background: linear-gradient(to right, #f60a3d 0%, #da9b26 51%, #314755 100%);
+  border: none;
+}
+
+.btn-grad {
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
