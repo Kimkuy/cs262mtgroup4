@@ -73,7 +73,7 @@
                                                     <div class="breakdance-dropdown-column">
                                                         <ul class="breakdance-dropdown-links">
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="{{ url('/about') }}" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Who We Are</span>
                                                                     </span>
@@ -103,7 +103,7 @@
                                 </div>
                             </li>
                             <li class="breakdance-menu-item-1744-109 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="#" target="_self" data-type="url">Merchandise</a>
+                                <a class="breakdance-link breakdance-menu-link" href="{{ url('/merchandise') }}" target="_self" data-type="url">Merchandise</a>
                             </li>
                             <li class="breakdance-menu-item-1744-110 breakdance-menu-item">
                                 <a class="breakdance-link breakdance-menu-link" href="#" target="_self" data-type="url">The News</a>
