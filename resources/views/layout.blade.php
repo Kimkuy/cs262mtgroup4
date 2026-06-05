@@ -193,7 +193,14 @@
                                 </div>
                             </li>
                             <li class="breakdance-menu-item-1744-111 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="/signup" target="_self" data-type="url">Contact</a>
+                                @auth
+        <form action="/logout" method="POST" class="d-inline m-0">
+            @csrf
+            <button type="submit" class="breakdance-link breakdance-menu-link">Logout</button>
+        </form>
+        @else
+        <a class="breakdance-link breakdance-menu-link" href="/signup">Sign up/Login</a>
+        @endauth
                             </li>
                         </ul>
                         <span class="breakdance-menu-overlay"></span>
