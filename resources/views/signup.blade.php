@@ -10,7 +10,7 @@
     
 </head>
 <body>
-    <h1 class="text-center py-2 ">Let's create something Together</h1>
+    <h1 class="text-center py-4 ">Let's create something Together</h1>
      <div class="row justify-content-center g-4 py-5 px-4">
            @auth
     <h2> Contrat! You are login!</h2>
@@ -20,7 +20,7 @@
     </form>
             @else
 
-            <div class="col-md-5 py-5 g-4">
+            <div class="col-md-5 g-4">
                 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
                     
                         <h4>SIGN UP</h4>
@@ -36,7 +36,7 @@
                         </form>
                 </div> 
             </div>
-            <div class="col-md-5 py-5">  
+            <div class="col-md-5">  
                 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
                         <h4>LOGIN</h4>
                         <p>Log in here!</p>
