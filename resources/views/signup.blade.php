@@ -5,9 +5,10 @@
     , initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-     <div class="row">
+     <div class="bd-primary">
            @auth
     <h2> Contrat! You are login!</h2>
     <form action="/logout" method="POST">
@@ -16,7 +17,7 @@
     </form>
             @else
 
-            <div class="col-md-6">
+            <div class="col-md-6 offset-md-1 py-5 ">
                 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
                     
                         <h4>SIGN UP</h4>
@@ -32,7 +33,7 @@
                         </form>
                 </div> 
             </div>
-            <div class="col-md-6">  
+            <div class="col-md-6 offset-md-1 py-5">  
                 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
                         <h4>LOGIN</h4>
                         <p>Log in here!</p>
@@ -47,7 +48,6 @@
                         <?php ?>
                 </div>
             </div>
-
              @endauth
         </div>
 </body>
