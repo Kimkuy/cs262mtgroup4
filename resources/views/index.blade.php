@@ -1,4 +1,5 @@
-
+@extends('layout')
+@section('content')
 
 <main class="bde-section-1737-100 bde-section" style="position: relative; background-color: #f3f4f6; overflow: hidden; padding: 60px 0;">
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://ih1.redbubble.net/image.2678650286.8580/st,small,507x507-pad,600x600,f8f8f8.jpg'); background-size: contain; background-position: left center; background-repeat: no-repeat; opacity: 0.15; z-index: 1; pointer-events: none;"></div>
@@ -385,4 +386,4 @@
                     </div>
                 </div>
 </main>
-
+@endsection
