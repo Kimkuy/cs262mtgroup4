@@ -1,6 +1,6 @@
-
 @extends('layout')
 @section('content')
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
      <main class="container">
         <div class="row">
@@ -29,10 +29,8 @@
                         </form>
                     </div>
                 @endforeach
-
             @else
             
-
                 <div class="col-md-6">
                     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
                         <h4>SIGN UP</h4>
