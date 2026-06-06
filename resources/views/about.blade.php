@@ -378,7 +378,7 @@
         <div class="about-mission__grid">
             <img
                 class="about-mission__image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFXoQGh447CBHZllDGAA82b1wMbtyK6Z5IrQ&s"
+                src="https://preview.redd.it/cambodia-roster-for-asian-games-v0-89kovee7a25h1.jpeg?auto=webp&s=3e010ea8d288da2eecfaf939e6c6b2db0667deff"
                 alt="Cambodia Esports national team"
                 onerror="this.src='https://ih1.redbubble.net/image.2678650286.8580/st,small,507x507-pad,600x600,f8f8f8.jpg'"
             >
