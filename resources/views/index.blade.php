@@ -227,7 +227,7 @@
                                         <article class="bde-loop-item ee-post">
                                             <a class="bde-loop-item__image-link ee-post-image-link bde-loop-item__image-left ee-posts-image-left" href="#" tabindex="-1">
                                                 <div class="bde-loop-item__image ee-post-image">
-                                                    <img width="1920" height="1080" src="#" class="attachment-full size-full wp-post-image" alt="MPL Cambodia begins 10th season with an unprecedented new look">
+                                                    <img width="1920" height="1080" src="https://en.moonton.com/upload/image/20260402/b8eb8a05c286f609b8018e337d12bd26.jpeg" class="attachment-full size-full wp-post-image" alt="MPL Cambodia begins 10th season with an unprecedented new look">
                                                 </div>
                                             </a>
                                             <div class="bde-loop-item__wrap ee-post-wrap">
@@ -286,7 +286,7 @@
                     <div class="bde-columns-1737-131 bde-columns">
                         <div class="bde-column-1737-132 bde-column">
                             <h5 class="bde-heading-1737-133 bde-heading is-before" data-entrance="slideUp" style="">
-                                SGEA is a member of:
+                                EFC is a member of:
                             </h5>
                             <div class="bde-grid-1737-134 bde-grid">
                                 <div class="bde-div-1737-135 bde-div is-before" data-entrance="slideUp" style="">
