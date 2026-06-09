@@ -33,5 +33,8 @@ Route::get('/edit-post/{post}', [PostController::class, 'showEditScreen']);
 Route::put('/edit-post/{post}', [PostController::class, 'updatePost']);
 Route::delete('/delete-post/{post}', [PostController::class, 'deletePost']);
 
-Route::get('/thenews1', [NewsController::class, 'index'])->name('news.index');
-Route::get('/thenews1/{news}', [NewsController::class, 'show'])->name('news.show');
+
+
+
+// Route::get('/thenews1', [NewsController::class, 'index'])->name('news.index');
+// Route::get('/thenews1/{news}', [NewsController::class, 'show'])->name('news.show');
