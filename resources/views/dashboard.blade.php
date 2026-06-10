@@ -1,12 +1,7 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+@extends('layout')
+@section('content')
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body>
      <main class="container">
         <div class="row">
             @auth
@@ -34,9 +29,8 @@
                         </form>
                     </div>
                 @endforeach
-
             @else
-
+            
                 <div class="col-md-6">
                     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
                         <h4>SIGN UP</h4>
@@ -86,5 +80,4 @@
             @endauth
         </div>
     </main>
-</body>
-</html>
+@endsection
