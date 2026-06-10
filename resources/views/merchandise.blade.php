@@ -1,357 +1,8 @@
 @extends('layout')
 @section('content')
 
-<style>
-    /* ── Hero ── */
-    .merch-hero {
-        position: relative;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #1a0a0e 100%);
-        padding: 80px 0 60px;
-        overflow: hidden;
-    }
-    .merch-hero::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background-image: url('https://ih1.redbubble.net/image.2678650286.8580/st,small,507x507-pad,600x600,f8f8f8.jpg');
-        background-size: contain;
-        background-position: right center;
-        background-repeat: no-repeat;
-        opacity: 0.06;
-        pointer-events: none;
-    }
-    .merch-hero .section-container {
-        position: relative;
-        z-index: 2;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 32px;
-    }
-    .merch-hero__eyebrow {
-        color: #b90216;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
-    .merch-hero__sub {
-        color: #94a3b8;
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 16px;
-    }
-    .merch-hero h1 {
-        font-size: clamp(2.2rem, 5vw, 3.6rem);
-        font-weight: 900;
-        line-height: 1.1;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin: 0;
-    }
-    .merch-hero h1 span { color: #b90216; }
+<link rel="stylesheet" href="{{ asset('/css/merchandise.css') }}">
 
-    /* ── Shared section wrapper ── */
-    .merch-section {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 72px 32px;
-    }
-
-    /* ── Intro / collection banner ── */
-    .merch-intro {
-        background: #ffffff;
-        border-bottom: 1px solid #e5e7eb;
-    }
-    .merch-intro__inner {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 64px;
-        align-items: center;
-    }
-    .merch-intro__logo-wrap {
-        background: #f8fafc;
-        border: 1px solid #e5e7eb;
-        border-radius: 16px;
-        padding: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .merch-intro__logo-wrap img {
-        max-width: 200px;
-        width: 100%;
-        display: block;
-    }
-    .merch-intro__eyebrow {
-        color: #b90216;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-    .merch-intro h2 {
-        font-size: clamp(1.5rem, 3vw, 2.1rem);
-        font-weight: 900;
-        color: #0f172a;
-        text-transform: uppercase;
-        line-height: 1.2;
-        margin: 0 0 16px;
-    }
-    .merch-intro p {
-        color: #4b5563;
-        line-height: 1.8;
-        font-size: 1rem;
-        margin-bottom: 24px;
-    }
-    .merch-intro__cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #b90216;
-        color: #fff;
-        font-weight: 700;
-        font-size: 0.9rem;
-        padding: 13px 26px;
-        border-radius: 6px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: background 0.2s;
-    }
-    .merch-intro__cta:hover { background: #8f0111; color: #fff; }
-
-    /* ── Product pill tags ── */
-    .merch-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 24px;
-    }
-    .merch-tags a {
-        display: inline-block;
-        background: #f1f5f9;
-        border: 1px solid #e2e8f0;
-        color: #0f172a;
-        font-size: 0.85rem;
-        font-weight: 600;
-        padding: 7px 16px;
-        border-radius: 999px;
-        text-decoration: none;
-        transition: background 0.2s, border-color 0.2s, color 0.2s;
-    }
-    .merch-tags a:hover {
-        background: #b90216;
-        border-color: #b90216;
-        color: #fff;
-    }
-
-    /* ── Product grid ── */
-    .merch-grid-section {
-        background: #f8fafc;
-        border-bottom: 1px solid #e5e7eb;
-    }
-    .merch-grid-section__eyebrow {
-        color: #b90216;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
-    .merch-grid-section h2 {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 900;
-        color: #0f172a;
-        text-transform: uppercase;
-        margin: 0 0 40px;
-    }
-    .merch-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 28px;
-    }
-    .merch-card {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: box-shadow 0.25s, transform 0.25s;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-    }
-    .merch-card:hover {
-        box-shadow: 0 12px 32px rgba(185,2,22,0.12);
-        transform: translateY(-4px);
-    }
-    .merch-card__img-wrap {
-        position: relative;
-        background: #f1f5f9;
-        aspect-ratio: 1 / 1;
-        overflow: hidden;
-    }
-    .merch-card__img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.4s;
-    }
-    .merch-card:hover .merch-card__img-wrap img {
-        transform: scale(1.05);
-    }
-    .merch-card__badge {
-        position: absolute;
-        top: 12px; left: 12px;
-        background: #b90216;
-        color: #fff;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        padding: 4px 10px;
-        border-radius: 4px;
-    }
-    .merch-card__body {
-        padding: 16px 18px 20px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    .merch-card__name {
-        font-weight: 700;
-        color: #0f172a;
-        font-size: 0.95rem;
-        margin-bottom: 6px;
-    }
-    .merch-card__desc {
-        color: #64748b;
-        font-size: 0.82rem;
-        line-height: 1.5;
-        flex: 1;
-        margin-bottom: 14px;
-    }
-    .merch-card__footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .merch-card__price {
-        font-weight: 900;
-        color: #b90216;
-        font-size: 1rem;
-    }
-    .merch-card__btn {
-        font-size: 0.78rem;
-        font-weight: 700;
-        color: #0f172a;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-    }
-    .merch-card:hover .merch-card__btn { color: #b90216; }
-
-    /* ── How to order ── */
-    .merch-how {
-        background: #0f172a;
-        border-bottom: 1px solid #1e293b;
-    }
-    .merch-how__eyebrow {
-        color: #b90216;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
-    .merch-how h2 {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 900;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin: 0 0 48px;
-    }
-    .merch-how__steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 32px;
-    }
-    .merch-how__step {
-        text-align: center;
-    }
-    .merch-how__step-num {
-        width: 52px; height: 52px;
-        border-radius: 50%;
-        background: #b90216;
-        color: #fff;
-        font-weight: 900;
-        font-size: 1.2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 16px;
-    }
-    .merch-how__step h3 {
-        font-weight: 700;
-        color: #f1f5f9;
-        font-size: 0.95rem;
-        margin: 0 0 8px;
-        text-transform: uppercase;
-    }
-    .merch-how__step p {
-        color: #64748b;
-        font-size: 0.85rem;
-        line-height: 1.6;
-        margin: 0;
-    }
-
-    /* ── Footer ── */
-    .merch-footer { background: #0f172a; }
-    .merch-footer .section-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 28px 32px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 16px;
-        border-top: 1px solid #1e293b;
-    }
-    .merch-footer__copy { color: #64748b; font-size: 0.875rem; }
-    .merch-footer__icons { display: flex; gap: 12px; }
-    .merch-footer__icons a {
-        display: flex; align-items: center; justify-content: center;
-        width: 32px; height: 32px;
-        border-radius: 50%;
-        background: #1e293b;
-        transition: background 0.2s;
-    }
-    .merch-footer__icons a:hover { background: #b90216; }
-    .merch-footer__icons svg { fill: #94a3b8; width: 15px; height: 15px; }
-    .merch-footer__icons a:hover svg { fill: #fff; }
-
-    /* ── Entrance animation ── */
-    .is-before { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .is-before.is-visible { opacity: 1; transform: translateY(0); }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-        .merch-intro__inner { grid-template-columns: 1fr; gap: 32px; }
-        .merch-footer .section-container { flex-direction: column; align-items: flex-start; }
-    }
-</style>
-
-<!-- ══════════════════════════════
-     HERO
-══════════════════════════════ -->
 <section class="merch-hero">
     <div class="section-container">
         <p class="merch-hero__eyebrow">// E-sport Federation Cambodia //</p>
@@ -360,9 +11,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     COLLECTION INTRO
-══════════════════════════════ -->
 <section class="merch-intro">
     <div class="merch-section is-before">
         <div class="merch-intro__inner">
@@ -401,9 +49,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     PRODUCT GRID
-══════════════════════════════ -->
 <section class="merch-grid-section">
     <div class="merch-section is-before">
         <p class="merch-grid-section__eyebrow">// shop now //</p>
@@ -524,9 +169,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     HOW TO ORDER
-══════════════════════════════ -->
 <section class="merch-how">
     <div class="merch-section is-before">
         <p class="merch-how__eyebrow">// how it works //</p>
@@ -556,9 +198,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     FOOTER
-══════════════════════════════ -->
 <footer class="merch-footer">
     <div class="section-container">
         <span class="merch-footer__copy">© 2026 E-sport Federation Cambodia. All rights reserved.</span>
@@ -579,20 +218,6 @@
     </div>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.is-before').forEach(function (el) {
-            observer.observe(el);
-        });
-    });
-</script>
+<script src="{{ asset('js/merchandise.js') }}"></script>
 
 @endsection

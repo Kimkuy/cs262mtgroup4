@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Newsroom Custom Variables & UI Elements
+   ========================================================================== */
+:root {
+    --gold-brand: #E0B13D;
+    --dark-surface: #121212;
+    --card-surface: #1a1a1a;
+    --text-muted: #888888;
+}
+
+/* Lightbox Modal Configuration toggled via HTML attributes */
+.search-form--full-screen[aria-hidden="true"] {
+    display: none !important;
+}
+
+.search-form--full-screen[aria-hidden="false"] {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+
+.search-form__lightbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form__lightbox-bg {
+    background: rgba(0, 0, 0, 0.96);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.search-form__lightbox-container {
+    position: relative;
+    z-index: 10;
+    width: 85%;
+    max-width: 650px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--gold-brand);
+}
+
+.search-form__field {
+    background: transparent;
+    border: none;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 1.6rem;
+    width: 100%;
+    outline: none;
+}
+
+.search-form__lightbox-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    z-index: 20;
+}
+
+.search-form__lightbox-button {
+    background: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: #ffffff;
+}
+
+/* ==========================================================================
+   Category Navigation & Layout Filters
+   ========================================================================== */
+.bde-tabs__tabslist {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    white-space: nowrap;
+    -webkit-overflow-scscrolling: touch;
+}
+
+.bde-tabs__tab {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid #2d2d2d;
+    padding: 10px 22px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bde-tabs__tab:hover {
+    border-color: var(--gold-brand);
+}
+
+.bde-tabs__tab.is-active {
+    background-color: var(--gold-brand);
+    color: #000000;
+    border-color: var(--gold-brand);
+}
+
+/* ==========================================================================
+   Responsive News Card Content Loops
+   ========================================================================== */
+.bde-loop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 2.5rem 2rem;
+    margin-top: 2rem;
+}
+
+.ee-post {
+    background-color: var(--card-surface);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease;
+}
+
+.ee-post:hover {
+    transform: translateY(-5px);
+}
+
+.ee-post-image img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.ee-post-wrap {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ee-post-title a {
+    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.ee-post-title a:hover {
+    color: var(--gold-brand);
+}
+
+.ee-post-meta {
+    margin: 0.8rem 0 1.2rem 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.ee-post-meta-author {
+    color: var(--gold-brand);
+    margin-right: 14px;
+    font-weight: 500;
+}
+
+.ee-post-content {
+    color: #dddddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.ee-post-button {
+    margin-top: auto;
+    background-color: var(--gold-brand);
+    color: #000000;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}

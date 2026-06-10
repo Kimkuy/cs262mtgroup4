@@ -1,330 +1,8 @@
 @extends('layout')
 @section('content')
 
-<style>
-    /* ── Hero Banner ── */
-    .about-hero {
-        position: relative;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #1a0a0e 100%);
-        padding: 80px 0 60px;
-        overflow: hidden;
-    }
-    .about-hero::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background-image: url('https://ih1.redbubble.net/image.2678650286.8580/st,small,507x507-pad,600x600,f8f8f8.jpg');
-        background-size: contain;
-        background-position: right center;
-        background-repeat: no-repeat;
-        opacity: 0.07;
-        pointer-events: none;
-    }
-    .about-hero .section-container {
-        position: relative;
-        z-index: 2;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 32px;
-    }
-    .about-hero__eyebrow {
-        color: #b90216;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
-    .about-hero__sub {
-        color: #94a3b8;
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 16px;
-    }
-    .about-hero h1 {
-        font-size: clamp(2.2rem, 5vw, 3.6rem);
-        font-weight: 900;
-        line-height: 1.1;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin: 0 0 24px;
-    }
-    .about-hero h1 span { color: #b90216; }
+<link rel="stylesheet" href="{{ asset('/css/about.css') }}">
 
-    /* ── Section wrapper ── */
-    .about-section {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 72px 32px;
-    }
-
-    /* ── Who We Are ── */
-    .about-who {
-        background: #ffffff;
-        border-bottom: 1px solid #e5e7eb;
-    }
-    .about-who__grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
-        align-items: start;
-    }
-    .about-who__eyebrow {
-        color: #b90216;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-    .about-who h2 {
-        font-size: clamp(1.6rem, 3vw, 2.2rem);
-        font-weight: 900;
-        color: #0f172a;
-        line-height: 1.2;
-        margin: 0 0 20px;
-        text-transform: uppercase;
-    }
-    .about-who p {
-        color: #4b5563;
-        line-height: 1.8;
-        font-size: 1rem;
-        margin-bottom: 16px;
-    }
-    .about-who__cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #b90216;
-        color: #fff;
-        font-weight: 700;
-        font-size: 0.9rem;
-        padding: 12px 24px;
-        border-radius: 6px;
-        text-decoration: none;
-        margin-top: 8px;
-        transition: background 0.2s;
-    }
-    .about-who__cta:hover { background: #8f0111; color: #fff; }
-    .about-who__image {
-        width: 100%;
-        border-radius: 12px;
-        object-fit: cover;
-        display: block;
-        max-height: 420px;
-        box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-    }
-
-    /* ── Mission ── */
-    .about-mission {
-        background: #f8fafc;
-        border-bottom: 1px solid #e5e7eb;
-    }
-    .about-mission__grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
-        align-items: center;
-    }
-    .about-mission__image {
-        width: 100%;
-        border-radius: 12px;
-        object-fit: cover;
-        display: block;
-        max-height: 380px;
-        box-shadow: 0 12px 40px rgba(0,0,0,0.10);
-        order: 1;
-    }
-    .about-mission__text { order: 2; }
-    .about-mission h2 {
-        font-size: clamp(1.6rem, 3vw, 2.2rem);
-        font-weight: 900;
-        color: #0f172a;
-        text-transform: uppercase;
-        line-height: 1.2;
-        margin: 0 0 20px;
-    }
-    .about-mission p {
-        color: #4b5563;
-        line-height: 1.8;
-        font-size: 1rem;
-        margin-bottom: 14px;
-    }
-
-    /* ── Committee ── */
-    .about-committee {
-        background: #0f172a;
-        border-bottom: 1px solid #1e293b;
-    }
-    .about-committee__eyebrow {
-        color: #b90216;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
-    .about-committee h2 {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 900;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin: 0 0 48px;
-    }
-    .about-committee__sub-heading {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #94a3b8;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 28px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #1e293b;
-    }
-    .about-committee__grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 28px;
-        margin-bottom: 56px;
-    }
-    .about-committee__card {
-        text-align: center;
-    }
-    .about-committee__card img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #1e293b;
-        margin: 0 auto 12px;
-        display: block;
-        background: #1e293b;
-    }
-    .about-committee__card .card-name {
-        font-weight: 700;
-        color: #f1f5f9;
-        font-size: 0.95rem;
-        margin-bottom: 4px;
-    }
-    .about-committee__card .card-role {
-        color: #64748b;
-        font-size: 0.82rem;
-        margin-bottom: 8px;
-    }
-    .about-committee__card a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: #1e293b;
-        transition: background 0.2s;
-    }
-    .about-committee__card a:hover { background: #b90216; }
-    .about-committee__card a svg { fill: #94a3b8; width: 14px; height: 14px; }
-    .about-committee__card a:hover svg { fill: #fff; }
-
-    /* ── Policies ── */
-    .about-policies {
-        background: #ffffff;
-        border-bottom: 1px solid #e5e7eb;
-    }
-    .about-policies__eyebrow {
-        color: #b90216;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
-    .about-policies h2 {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 900;
-        color: #0f172a;
-        text-transform: uppercase;
-        margin: 0 0 40px;
-    }
-    .about-policies__list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        max-width: 640px;
-    }
-    .about-policies__item {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        background: #f8fafc;
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        padding: 16px 20px;
-        text-decoration: none;
-        transition: border-color 0.2s, background 0.2s;
-    }
-    .about-policies__item:hover {
-        border-color: #b90216;
-        background: #fff5f6;
-    }
-    .about-policies__item svg { flex-shrink: 0; color: #b90216; }
-    .about-policies__item span {
-        color: #0f172a;
-        font-weight: 600;
-        font-size: 0.95rem;
-    }
-
-    /* ── Footer ── */
-    .about-footer {
-        background: #0f172a;
-    }
-    .about-footer .section-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 28px 32px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-    .about-footer__copy {
-        color: #64748b;
-        font-size: 0.875rem;
-    }
-    .about-footer__icons { display: flex; gap: 12px; }
-    .about-footer__icons a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 32px; height: 32px;
-        border-radius: 50%;
-        background: #1e293b;
-        transition: background 0.2s;
-    }
-    .about-footer__icons a:hover { background: #b90216; }
-    .about-footer__icons svg { fill: #94a3b8; width: 15px; height: 15px; }
-    .about-footer__icons a:hover svg { fill: #fff; }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-        .about-who__grid,
-        .about-mission__grid { grid-template-columns: 1fr; gap: 32px; }
-        .about-mission__image { order: 0; }
-        .about-committee__grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-        .about-footer .section-container { flex-direction: column; align-items: flex-start; }
-    }
-
-    /* ── Entrance animation ── */
-    .is-before { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .is-before.is-visible { opacity: 1; transform: translateY(0); }
-</style>
-
-<!-- ══════════════════════════════
-     HERO BANNER
-══════════════════════════════ -->
 <section class="about-hero">
     <div class="section-container">
         <p class="about-hero__eyebrow">// E-sport Federation Cambodia //</p>
@@ -333,9 +11,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     WHO WE ARE
-══════════════════════════════ -->
 <section class="about-who">
     <div class="about-section is-before">
         <div class="about-who__grid">
@@ -370,9 +45,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     BEYOND THE GAME
-══════════════════════════════ -->
 <section class="about-mission">
     <div class="about-section is-before">
         <div class="about-mission__grid">
@@ -398,9 +70,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     EXECUTIVE COMMITTEE
-══════════════════════════════ -->
 <section class="about-committee">
     <div class="about-section is-before">
         <p class="about-committee__eyebrow">// Our People //</p>
@@ -496,9 +165,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     POLICIES & HANDBOOK
-══════════════════════════════ -->
 <section class="about-policies">
     <div class="about-section is-before">
         <p class="about-policies__eyebrow">// Play fair. Play safe. Play for Cambodia. //</p>
@@ -534,9 +200,6 @@
     </div>
 </section>
 
-<!-- ══════════════════════════════
-     FOOTER
-══════════════════════════════ -->
 <footer class="about-footer">
     <div class="section-container">
         <span class="about-footer__copy">© 2026 E-sport Federation Cambodia. All rights reserved.</span>
@@ -557,24 +220,6 @@
     </div>
 </footer>
 
-<!-- ══════════════════════════════
-     Scroll entrance animation
-══════════════════════════════ -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
-
-        document.querySelectorAll('.is-before').forEach(function (el) {
-            observer.observe(el);
-        });
-    });
-</script>
+<script src="{{ asset('js/about.js') }}"></script>
 
 @endsection

@@ -106,7 +106,7 @@
                                 <a class="breakdance-link breakdance-menu-link" href="{{ url('/merchandise') }}" target="_self" data-type="url">Merchandise</a>
                             </li>
                             <li class="breakdance-menu-item-1744-110 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="#" target="_self" data-type="url">The News</a>
+                                <a class="breakdance-link breakdance-menu-link" href="{{ url('/thenews') }}" target="_self" data-type="url">The News</a>
                             </li>
                             <li class="bde-menu-dropdown-1744-107 bde-menu-dropdown breakdance-menu-item">
                                 <div class="breakdance-dropdown">

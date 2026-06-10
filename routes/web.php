@@ -9,10 +9,11 @@ Route::get('/', function () { return view('index');});
 Route::get('/about', function () { return view('about');});
 Route::get('/merchandise', function () { return view('merchandise');});
 Route::get('/signup', function () { return view('signup');});
+Route::get('/homepage', function () { return view('homepage');});
 Route::get('/thenews', function () { return view('thenews');});
 Route::get('/index', function () { return view('index');});
-Route::get('/thenews1', function () { return view('thenews1');});
-Route::get('/layout1', function () { return view('layout1');});
+// Route::get('/thenews1', function () { return view('thenews1');});
+// Route::get('/layout1', function () { return view('layout1');});
 
 Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
