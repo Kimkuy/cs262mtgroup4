@@ -211,7 +211,7 @@
                                                         <ul class="breakdance-dropdown-links">
                                                             <li class="breakdance-dropdown-item">
                                                                 <a class="breakdance-link breakdance-dropdown-link"
-                                                                    href="#" target="_self" data-type="url">
+                                                                    href="{{ url('/competition') }}" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span
                                                                             class="breakdance-dropdown-link__text">Mobile
@@ -221,7 +221,7 @@
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
                                                                 <a class="breakdance-link breakdance-dropdown-link"
-                                                                    href="#" target="_self" data-type="url">
+                                                                    href="#C1" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span
                                                                             class="breakdance-dropdown-link__text">PC</span>
@@ -230,7 +230,7 @@
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
                                                                 <a class="breakdance-link breakdance-dropdown-link"
-                                                                    href="#" target="_self" data-type="url">
+                                                                    href="#C2" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span
                                                                             class="breakdance-dropdown-link__text">Console</span>
