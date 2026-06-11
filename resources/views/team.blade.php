@@ -87,19 +87,14 @@
             rel="preload" />
 
         <style>
-            /* The container takes up the entire browser screen */
             .screen-container {
                 display: grid;
                 place-items: center;
-                /* Centers horizontally and vertically */
                 height: 100vh;
-                /* 100% of the viewport height */
                 margin-left: 50px;
-                /* Removes default browser margins */
                 background-color: #f0f0f0;
             }
 
-            /* Optional: Ensures the image looks good on mobile screens */
             .screen-container img {
                 max-width: 90%;
                 height: auto;
@@ -136,7 +131,6 @@
         </nav>
         <section class="bde-section-1755-100 bde-section">
             <div class="section-background-overlay"></div>
-
             <div class="section-container">
                 <div class="bde-div-1755-101 bde-div">
                     <div class="bde-text-1755-102 bde-text">
