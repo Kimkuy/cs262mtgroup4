@@ -175,10 +175,10 @@
                                 <a class="bde-loop-item__image-link ee-post-image-link" href="{{ $article->url ?? '/posts/'.$article->id }}" tabindex="-1">
                                     <div class="bde-loop-item__image ee-post-image">
                                         <img width="1200" height="628" 
-                                            src="{{ $article->image ? asset('storage/' . $article->image) : 'https://esports.org.sg/wp-content/uploads/2026/05/Asian-Games-Qualifiers-PR-Banner.webp' }}" 
-                                            class="attachment-full size-full wp-post-image" 
-                                            alt="{{ $article->title }}" 
-                                            decoding="async">
+                                                src="{{ asset('storage/' . $article->image) }}" 
+                                                class="attachment-full size-full wp-post-image" 
+                                                alt="{{ $article->title }}" 
+                                                decoding="async">
                                     </div>
                                 </a>
                                 
@@ -254,10 +254,10 @@
                                 <a class="bde-loop-item__image-link ee-post-image-link" href="{{ $article->url ?? '/posts/'.$article->id }}" tabindex="-1">
                                     <div class="bde-loop-item__image ee-post-image">
                                         <img width="1200" height="628" 
-                                            src="{{ $article->image ? asset('storage/' . $article->image) : 'https://esports.org.sg/wp-content/uploads/2026/05/Asian-Games-Qualifiers-PR-Banner.webp' }}" 
-                                            class="attachment-full size-full wp-post-image" 
-                                            alt="{{ $article->title }}" 
-                                            decoding="async">
+                                                src="{{ $article->image_path }}" 
+                                                class="attachment-full size-full wp-post-image" 
+                                                alt="{{ $article->title }}" 
+                                                decoding="async">
                                     </div>
                                 </a>
                                 <div class="bde-loop-item__wrap ee-post-wrap">
