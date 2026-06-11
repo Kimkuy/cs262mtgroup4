@@ -35,6 +35,10 @@ Route::delete('/delete-post/{post}', [PostController::class, 'deletePost']);
 
 
 
+Route::get('/thenews', [PostController::class, 'showTheNews']);
+
+
+
 
 // Route::get('/thenews1', [NewsController::class, 'index'])->name('news.index');
 // Route::get('/thenews1/{news}', [NewsController::class, 'show'])->name('news.show');
