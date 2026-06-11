@@ -25,7 +25,7 @@
                                 <p>EFC is a member of the International Esports Federation (IESF), the Asian Electronic Sports Federation (AESF), and the <a href="https://www.globalesports.org/">Global Esports Federation (GEF)</a>.</p>
                             </div>
                         </div><div class="bde-button-1737-107 bde-button">
-                            <a class="breakdance-link button-atom button-atom--primary bde-button__button" href="#" target="_self" data-type="url">
+                            <a class="breakdance-link button-atom button-atom--primary bde-button__button" href="{{ url('/about') }}" target="_self" data-type="url">
                                 <span class="button-atom__text">Who We Are</span>
                             </a>
                         </div>
@@ -260,22 +260,22 @@
                                 <div class="bde-posts-pagination bde-posts-navigation-numbers bde-posts-navigation-numbers-prev-next">
                                     <div class="bde-posts-prev-next-link"></div>
                                         <ul><li class="bde-posts-navigation-numbers--active">
-                                                <a class="is-active" href="#">1</a></li>
+                                                <a class="is-active" href="{{ url('/thenews') }}">1</a></li>
                                             <li>
-                                                <a href="#">2</a>
+                                                <a href="{{ url('/thenews') }}">2</a>
                                             </li>
                                             <li>
-                                                <a href="#">3</a>
+                                                <a href="{{ url('/thenews') }}">3</a>
                                             </li>
                                             <li class="bde-posts-navigation-numbers--ellipses">
                                                 <span>…</span>
                                             </li>
                                             <li>
-                                                <a href="#">15</a>
+                                                <a href="{{ url('/thenews') }}">15</a>
                                             </li>
                                         </ul>
                                         <div class="bde-posts-prev-next-link">
-                                            <a href="#">Next »</a>
+                                            <a href="{{ url('/thenews') }}">Next »</a>
                                         </div>
                                 </div>
                             </div>

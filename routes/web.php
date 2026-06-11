@@ -19,6 +19,7 @@ Route::prefix('thenews')->group(function () {
 });
 Route::get('/index', function () { return view('index');});
 Route::get('/team', function () { return view('team');});
+Route::get('/competition', function () { return view('competiton');});
 
 // Route::get('/thenews1', function () { return view('thenews1');});
 // Route::get('/layout1', function () { return view('layout1');});
