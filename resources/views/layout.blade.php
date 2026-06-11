@@ -81,14 +81,14 @@
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#about1" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Our Executive Committee</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#about2" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Policies &amp; Handbook</span>
                                                                     </span>
@@ -154,21 +154,21 @@
                                                     <div class="breakdance-dropdown-column">
                                                         <ul class="breakdance-dropdown-links">
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="{{ url('/team') }}" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">MPL KH</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#T1" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Angkor Warriors</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
                                                             <li class="breakdance-dropdown-item">
-                                                                <a class="breakdance-link breakdance-dropdown-link" href="#" target="_self" data-type="url">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="#T2" target="_self" data-type="url">
                                                                     <span class="breakdance-dropdown-link__label">
                                                                         <span class="breakdance-dropdown-link__text">Achievements</span>
                                                                     </span>
