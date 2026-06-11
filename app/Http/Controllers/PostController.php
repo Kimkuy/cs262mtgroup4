@@ -64,4 +64,10 @@ class PostController extends Controller
     }
         return redirect('/dashboard');
     }
+
+public function showTheNews() {
+    $posts = Post::latest()->get(); 
+    
+    return view('thenews', compact('posts'));
+}
 }
