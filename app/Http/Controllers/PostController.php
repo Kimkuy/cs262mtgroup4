@@ -68,6 +68,6 @@ class PostController extends Controller
 public function showTheNews() {
     $posts = Post::latest()->get(); 
     
-    return view('thenews', compact('posts'));
+    return view('cambodia', compact('posts'));
 }
 }
