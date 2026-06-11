@@ -4,6 +4,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\MerchandiseController;
 
 Route::get('/', function () { return view('index');});
 Route::get('/about', function () { return view('about');});
@@ -36,7 +37,7 @@ Route::delete('/delete-post/{post}', [PostController::class, 'deletePost']);
 
 
 Route::get('/thenews', [PostController::class, 'showTheNews']);
-
+Route::get('/merchandise', [MerchandiseController::class, 'index'])->name('merchandise.index');
 
 
 

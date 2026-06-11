@@ -55,115 +55,31 @@
         <h2>Featured Items</h2>
         <div class="merch-grid">
 
-            <!-- Jersey -->
-            <a href="https://vshopkh.com/" target="_blank" class="merch-card">
-                <div class="merch-card__img-wrap">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnn_HfoNiQvRvpLi6xTTMhZ0sb_bZyrDS3SQ&s" alt="National Jersey"
-                         onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s'">
-                    <span class="merch-card__badge">New</span>
-                </div>
-                <div class="merch-card__body">
-                    <p class="merch-card__name">EFC National Jersey</p>
-                    <p class="merch-card__desc">Official Team Cambodia national esports jersey. Wear the flag with pride.</p>
-                    <div class="merch-card__footer">
-                        <span class="merch-card__price">Shop →</span>
-                        <span class="merch-card__btn">View on VSHOPKH
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                        </span>
+            @foreach($featuredItems as $item)
+                <a href="{{ $item->shop_url }}" target="_blank" class="merch-card">
+                    <div class="merch-card__img-wrap">
+                        <img src="{{ $item->image_path }}" alt="{{ $item->name }}"
+                             onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s'">
+                        
+                        {{-- Only display the badge if it exists in the database --}}
+                        @if($item->badge)
+                            <span class="merch-card__badge">{{ $item->badge }}</span>
+                        @endif
                     </div>
-                </div>
-            </a>
-
-            <!-- Hoodie -->
-            <a href="https://vshopkh.com/" target="_blank" class="merch-card">
-                <div class="merch-card__img-wrap">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7AsDxGl7vUmI3b-QUeN5JSUfm857PgiPhBw&s" alt="EFC Hoodie"
-                         onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s'">
-                </div>
-                <div class="merch-card__body">
-                    <p class="merch-card__name">EFC Hoodie</p>
-                    <p class="merch-card__desc">Premium pullover hoodie featuring the EFC crest. Perfect for tournament days.</p>
-                    <div class="merch-card__footer">
-                        <span class="merch-card__price">Shop →</span>
-                        <span class="merch-card__btn">View on VSHOPKH
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                        </span>
+                    <div class="merch-card__body">
+                        <p class="merch-card__name">{{ $item->name }}</p>
+                        <p class="merch-card__desc">{{ $item->description }}</p>
+                        <div class="merch-card__footer">
+                            <span class="merch-card__price">Shop →</span>
+                            <span class="merch-card__btn">View on VSHOPKH
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"/>
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                </div>
-            </a>
-
-            <!-- Tracksuit Jacket -->
-            <a href="https://vshopkh.com/" target="_blank" class="merch-card">
-                <div class="merch-card__img-wrap">
-                    <img src="https://d3h9qea4qy4169.cloudfront.net/600px_PRO_Esports_v3_allmode_205ff692bb.png" alt="Tracksuit Jacket"
-                         onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s'">
-                    <span class="merch-card__badge">Popular</span>
-                </div>
-                <div class="merch-card__body">
-                    <p class="merch-card__name">EFC Tracksuit Jacket</p>
-                    <p class="merch-card__desc">Official tracksuit jacket worn by Team Cambodia esports athletes at major competitions.</p>
-                    <div class="merch-card__footer">
-                        <span class="merch-card__price">Shop →</span>
-                        <span class="merch-card__btn">View on VSHOPKH
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                        </span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Cap -->
-            <a href="https://vshopkh.com/" target="_blank" class="merch-card">
-                <div class="merch-card__img-wrap">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnriBp97X4lZ_B5jYHi1wkF2kmnUdK3TcO1w&s" alt="EFC Cap"
-                         onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s'">
-                </div>
-                <div class="merch-card__body">
-                    <p class="merch-card__name">EFC Cap</p>
-                    <p class="merch-card__desc">Structured snapback with embroidered EFC logo. One size fits all.</p>
-                    <div class="merch-card__footer">
-                        <span class="merch-card__price">Shop →</span>
-                        <span class="merch-card__btn">View on VSHOPKH
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                        </span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Mousepad -->
-            <a href="https://vshopkh.com/" target="_blank" class="merch-card">
-                <div class="merch-card__img-wrap">
-                    <img src="https://cdn.escharts.com/uploads/public/69d/635/ab5/69d635ab5947e875312605.png" alt="EFC Mousepad"
-                         onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s'">
-                </div>
-                <div class="merch-card__body">
-                    <p class="merch-card__name">EFC Mousepad</p>
-                    <p class="merch-card__desc">Extended gaming mousepad with EFC branding — smooth surface, non-slip base.</p>
-                    <div class="merch-card__footer">
-                        <span class="merch-card__price">Shop →</span>
-                        <span class="merch-card__btn">View on VSHOPKH
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                        </span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Tote Bag -->
-            <a href="https://vshopkh.com/" target="_blank" class="merch-card">
-                <div class="merch-card__img-wrap">
-                    <img src="https://cdn.escharts.com/uploads/public/615/af3/7bb/615af37bb35cf454877795." alt="EFC Tote Bag"
-                         onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s'">
-                </div>
-                <div class="merch-card__body">
-                    <p class="merch-card__name">EFC Tote Bag</p>
-                    <p class="merch-card__desc">Heavy-duty canvas tote with EFC print. Carry your gear in style.</p>
-                    <div class="merch-card__footer">
-                        <span class="merch-card__price">Shop →</span>
-                        <span class="merch-card__btn">View on VSHOPKH
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                        </span>
-                    </div>
-                </div>
-            </a>
+                </a>
+            @endforeach
 
         </div>
     </div>
