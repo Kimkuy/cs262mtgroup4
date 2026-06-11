@@ -106,8 +106,40 @@
                             <li class="breakdance-menu-item-1744-109 breakdance-menu-item">
                                 <a class="breakdance-link breakdance-menu-link" href="{{ url('/merchandise') }}" target="_self" data-type="url">Merchandise</a>
                             </li>
-                            <li class="breakdance-menu-item-1744-110 breakdance-menu-item">
-                                <a class="breakdance-link breakdance-menu-link" href="{{ url('/thenews') }}" target="_self" data-type="url">The News</a>
+                            <li class="bde-menu-dropdown-1744-110 bde-menu-dropdown breakdance-menu-item">
+                                <div class="breakdance-dropdown">
+                                    <div class="breakdance-dropdown-toggle">
+                                        <button class="breakdance-menu-link" type="button" aria-expanded="false" aria-controls="dropdown-110">The News</button>
+                                        <button class="breakdance-menu-link-arrow" type="button" aria-expanded="false" aria-controls="dropdown-110" aria-label="The News Submenu"></button>
+                                    </div>
+                                    <div class="breakdance-dropdown-floater" aria-hidden="true" id="dropdown-110">
+                                        <div class="breakdance-dropdown-body">
+                                            <div class="breakdance-dropdown-section">
+                                                <div class="breakdance-dropdown-columns">
+                                                    <div class="breakdance-dropdown-column">
+                                                        <ul class="breakdance-dropdown-links">
+                                                            <li class="breakdance-dropdown-item">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="{{ url('/thenews/cambodia') }}" target="_self" data-type="url">
+                                                                    <span class="breakdance-dropdown-link__label">
+                                                                        <span class="breakdance-dropdown-link__text">Cambodia</span>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="breakdance-dropdown-item">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="{{ url('/thenews/global') }}" target="_self" data-type="url">
+                                                                    <span class="breakdance-dropdown-link__label">
+                                                                        <span class="breakdance-dropdown-link__text">Global</span>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="breakdance-dropdown-caret"></span>
+                                    </div>
+                                </div>
                             </li>
                             <li class="bde-menu-dropdown-1744-107 bde-menu-dropdown breakdance-menu-item">
                                 <div class="breakdance-dropdown">
@@ -193,16 +225,45 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="breakdance-menu-item-1744-111 breakdance-menu-item">
-                                @auth
-        <form action="/logout" method="POST" class="d-inline m-0">
-            @csrf
-            <button type="submit" class="breakdance-link breakdance-menu-link">Logout</button>
-        </form>
-        @else
-        <a class="breakdance-link breakdance-menu-link" href="/signup">Sign up/Login</a>
-        @endauth
-                            </li>
+                           <li class="breakdance-menu-item-1744-111 breakdance-menu-item">
+    @auth
+    <form action="/logout" method="POST" class="d-inline m-0">
+        @csrf
+        <button type="submit" class="breakdance-link breakdance-menu-link">Logout</button>
+    </form>
+    @else
+    <a class="breakdance-link breakdance-menu-link" href="/signup">Sign up/Login</a>
+    @endauth
+</li>
+
+{{-- Welcome user badge --}}
+{{-- Welcome user badge --}}
+@auth
+<li class="breakdance-menu-item" style="display:flex; align-items:center; gap:0.5rem; padding: 0 0.6rem;">
+    <div style="
+        width: 32px; height: 32px;
+        border-radius: 50%;
+        background: #f80808;
+        color: #eff1f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#001f54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+    </div>
+    <span style="
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #000000;
+        white-space: nowrap;
+    ">Welcome, {{ auth()->user()->name }}</span>
+</li>
+@endauth
+
                         </ul>
                         <span class="breakdance-menu-overlay"></span>
                     </nav>
