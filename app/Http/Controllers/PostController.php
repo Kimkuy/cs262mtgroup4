@@ -10,12 +10,17 @@ class PostController extends Controller
     public function createPost(Request $request){
         $incomingFields = $request->validate([
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'image' => 'nullable|image|max:2048',
         ]);
 
         $incomingFields['title'] = strip_tags($incomingFields['title']);
         $incomingFields['body'] = strip_tags($incomingFields['body']);
         $incomingFields['user_id'] = auth()->id(); 
+
+        if ($request->hasFile('image')) {
+        $incomingFields['image'] = $request->file('image')->store('post-images', 'public');
+    }
 
         Post::create($incomingFields);
         return redirect('/dashboard');
@@ -39,14 +44,24 @@ class PostController extends Controller
         $incomingFields['title'] = strip_tags($incomingFields['title']);
         $incomingFields['body'] = strip_tags($incomingFields['body']);
 
+         if ($request->hasFile('image')) {
+        if ($post->image) {
+            \Storage::disk('public')->delete($post->image);
+        }
+        $incomingFields['image'] = $request->file('image')->store('post-images', 'public');
+    }
+
         $post->update($incomingFields);
         return redirect('/dashboard');
     }
 
     public function deletePost(Post $post){
-        if(auth()->user()->id === $post['user_id']){ 
-            $post->delete();
+        if (auth()->user()->id === $post['user_id']) {
+        if ($post->image) {
+            \Storage::disk('public')->delete($post->image);
         }
+        $post->delete();
+    }
         return redirect('/dashboard');
     }
 }

@@ -11,11 +11,17 @@
         <div class="row">
             @auth
             <h2> Contrat! You are login!</h2>
-                <form action="/edit-post/{{$post->id}}" method="POST" class="p-3 ">
+                <form action="/edit-post/{{ $post->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <input type="text" name="title" value="{{$post->title}}" class="form-control">
                     <textarea name="body" class="form-control my-3">{{$post->body}}</textarea>
+                    @if($post->image)
+                        <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid mb-2" style="max-height:200px;">
+                        <p class="text-muted">Upload a new image to replace it</p>
+                    @endif
+
+                    <input type="file" name="image" class="my-2 form-control" accept="image/*">
                     <button class="btn btn-primary">Save Changes</button> 
                 </form>
             @else

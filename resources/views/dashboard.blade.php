@@ -7,10 +7,11 @@
             @auth
                 <h2>Create Post</h2>
                 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-                    <form action="/create-post" method="POST">
+                    <form action="/create-post" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="text" name="title" class="my-2 form-control" placeholder="Post Title" value="{{ old('title') }}">
                         <textarea name="body" class="my-2 form-control" placeholder="Body content...">{{ old('body') }}</textarea>
+                        <input type="file" name="image" class="my-2 form-control" accept="image/*">
                         <br>
                         <button type="submit" class="btn btn-primary my-2">Create Post</button>
                     </form>
@@ -21,6 +22,15 @@
                     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
                         <h3>{{ $post['title'] }} by {{ $post->user->name }}</h3>
                         <p>{{ $post['body'] }}</p>
+
+                        {{-- Display image if it exists --}}
+                        @if($post->image)
+                            <img src="{{ asset('storage/' . $post->image) }}" 
+                                alt="Post image" 
+                                class="img-fluid mb-2" 
+                                style="max-height: 300px;">
+                        @endif
+
                         <p><a href="/edit-post/{{ $post->id }}">Edit</a></p>
                         <form action="/delete-post/{{ $post->id }}" method="POST">
                             @csrf
