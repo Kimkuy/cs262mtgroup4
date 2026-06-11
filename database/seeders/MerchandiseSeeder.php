@@ -45,12 +45,19 @@ class MerchandiseSeeder extends Seeder
                 'badge' => null,
                 'shop_url' => 'https://vshopkh.com/',
             ],
+            [
+                'name' => 'EFC Tote Bag',
+                'description' => 'Heavy-duty canvas tote with EFC print. Carry your gear in style.',
+                'image_path' => 'https://cdn.escharts.com/uploads/public/615/af3/7bb/615af37bb35cf454877795.',
+                'badge' => null,
+                'shop_url' => 'https://vshopkh.com/',
+            ],
         ];
 
         foreach ($items as $item) {
             Merchandise::updateOrCreate(
-        ['name' => $item['name']], // 1st array: Columns to look up if the item already exists
-        $item                      // 2nd array: The rest of the data to insert or update
+        ['name' => $item['name']], 
+        $item                      
     );
         }
     }
