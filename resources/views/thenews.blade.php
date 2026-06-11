@@ -2,6 +2,7 @@
 @section('content')
 
 <head>
+    <link rel="stylesheet" href="{{ asset('/css/thenews.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Thenews - E-sport Federation Cambodia</title>
@@ -285,4 +286,5 @@
                 </div>
 
 </body>
+<script src="{{ asset('js/thenews.js') }}"></script>
 @endsection

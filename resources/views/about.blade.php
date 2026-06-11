@@ -70,7 +70,7 @@
     </div>
 </section>
 
-<section class="about-committee">
+<section id="about1" class="about-committee">
     <div class="about-section is-before">
         <p class="about-committee__eyebrow">// Our People //</p>
         <h2>Executive Committee</h2>
@@ -165,7 +165,7 @@
     </div>
 </section>
 
-<section class="about-policies">
+<section id="about2" class="about-policies">
     <div class="about-section is-before">
         <p class="about-policies__eyebrow">// Play fair. Play safe. Play for Cambodia. //</p>
         <h2>Policies &amp; Handbook</h2>
