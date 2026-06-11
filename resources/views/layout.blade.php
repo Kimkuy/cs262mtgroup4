@@ -263,7 +263,7 @@
         font-weight: 600;
         color: #000000;
         white-space: nowrap;
-    ">Welcome, {{ auth()->user()->name }}</span>
+    "><a href="{{ url('/dashboard') }}">Welcome, {{ auth()->user()->name }}</a></span>
 </li>
 @endauth
 
