@@ -41,9 +41,9 @@
         <div class="bde-header-builder__header-builder-border-top"></div>
         <div class="bde-header-builder__container">
             <div class="bde-div-1744-101 bde-div">
-                <a href="{{ url('/index') }}" class="flex items-center hover:no-underline px-2 md:px-0">
-                    <img style="height: 3cm; width: 3cm; transform: translate(100px, 2px); border-radius: 50%; mix-blend-mode: multiply;" 
-                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s"alt="EFC Logo">
+                <a href="{{ url('/index') }}" class="flex items-center hover:no-underline px-4 md:px-6">
+                    <img style="height: 3cm; width: 3cm; transform: translate(20px, 2px); border-radius: 50%; mix-blend-mode: multiply;" 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s" alt="EFC Logo">
                 </a>
                 <div class="bde-menu-1744-104 bde-menu">
                     <nav class="breakdance-menu breakdance-menu--collapse breakdance-menu--placement-center breakdance-menu--offcanvas breakdance-menu--offcanvas-right breakdance-menu--effect breakdance-menu--effect-underline breakdance-menu--effect-center breakdance-menu--enabled breakdance-menu--dropdown-accordion">
