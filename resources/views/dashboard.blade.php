@@ -285,8 +285,8 @@
 
                     <div class="mb-2">
                         <select name="news_type" class="form-control-custom" style="cursor: pointer;">
-                            <option value="cambodia" {{ old('news_type') == 'cambodia' ? 'selected' : '' }}>📍 Target Destination: Cambodia Feed</option>
-                            <option value="global" {{ old('news_type') == 'global' ? 'selected' : '' }}>🌐 Target Destination: Global Feed</option>
+                            <option value="cambodia" {{ old('news_type') == 'cambodia' ? 'selected' : '' }}>Target Destination: Cambodia Feed</option>
+                            <option value="global" {{ old('news_type') == 'global' ? 'selected' : '' }}>Target Destination: Global Feed</option>
                         </select>
                     </div>
 
