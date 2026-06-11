@@ -10,7 +10,7 @@ class NewsController extends Controller
 {
     public function cambodia()
     {
-        $posts = Post::latest()->get();
+        $posts = Post::where('news_type', 'cambodia')->latest()->get();
         $newsArticles = News::orderBy('published_date', 'desc')->get();
 
         

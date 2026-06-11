@@ -122,7 +122,6 @@
         }
     </style>
     
-    
     <link rel="preload" as="image" href="https://esports.org.sg/wp-content/uploads/2026/01/particle-light-hero.webp" fetchpriority="high">
     <link rel="preload" as="image" href="https://esports.org.sg/wp-content/uploads/2026/01/lionhead-hero.webp" fetchpriority="high">
 </head>
@@ -166,37 +165,42 @@
                         </div>
                     </div>
                 </div>
+                
                 <h2 class="bde-heading-1766-110 bde-heading">latest news</h2>
+                
                 <div class="bde-loop bde-loop-grid ee-posts ee-posts-grid bde-loop-isotope ee-posts-isotope" style="position: relative;">
-                    
                     @if(isset($posts) && count($posts) > 0)
-                        @foreach($posts as $post)
-                            <article class="bde-loop-item ee-post" data-filters="{{ $post->category_id ?? 'all' }}">
-                                <a class="bde-loop-item__image-link ee-post-image-link" href="/posts/{{ $post->slug ?? $post->id }}" tabindex="-1">
+                        @foreach($posts as $article)
+                            <article class="bde-loop-item ee-post" data-filters="{{ $article->filters ?? 'all' }}">
+                                <a class="bde-loop-item__image-link ee-post-image-link" href="{{ $article->url ?? '/posts/'.$article->id }}" tabindex="-1">
                                     <div class="bde-loop-item__image ee-post-image">
-                                        <img width="1200" height="628" src="{{ $post->image ? asset('storage/' . $post->image) : 'https://esports.org.sg/wp-content/uploads/2026/05/Asian-Games-Qualifiers-PR-Banner.webp' }}" class="attachment-full size-full wp-post-image" alt="{{ $post->title }}" decoding="async">
+                                        <img width="1200" height="628" 
+                                            src="{{ $article->image ? asset('storage/' . $article->image) : 'https://esports.org.sg/wp-content/uploads/2026/05/Asian-Games-Qualifiers-PR-Banner.webp' }}" 
+                                            class="attachment-full size-full wp-post-image" 
+                                            alt="{{ $article->title }}" 
+                                            decoding="async">
                                     </div>
                                 </a>
                                 
                                 <div class="bde-loop-item__wrap ee-post-wrap">
                                     <h3 class="ee-post-title">
-                                        <a class="bde-loop-item__title-link ee-post-title-link" href="/posts/{{ $post->slug ?? $post->id }}">{{ $post->title }}</a>
+                                        <a class="bde-loop-item__title-link ee-post-title-link" href="{{ $article->url ?? '/posts/'.$article->id }}">{{ $article->title }}</a>
                                     </h3>
                                     
                                     <div class="bde-loop-item__post-meta ee-post-meta">
                                         <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">
-                                            {{ $post->user->name ?? 'Author' }}
+                                            {{ $article->author ?? $article->user->name ?? 'Author' }}
                                         </span>
                                         <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
-                                            {{ $post->created_at ? $post->created_at->format('M d, Y') : 'Date' }}
+                                            {{ $article->published_date ? \Carbon\Carbon::parse($article->published_date)->format('M d, Y') : ($article->created_at ? $article->created_at->format('M d, Y') : 'Date') }}
                                         </span>
                                     </div>
                                     
                                     <div class="bde-loop-item__content ee-post-content">
-                                        {{ Str::limit($post->content ?? $post->body, 120, '...') }}
+                                        {{ Str::limit($article->content ?? $article->body, 120, '...') }}
                                     </div>
                                     
-                                    <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="/posts/{{ $post->slug ?? $post->id }}">
+                                    <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="{{ $article->url ?? '/posts/'.$article->id }}">
                                         <span class="button-atom__text">Read more</span>
                                     </a>
                                 </div>
@@ -207,12 +211,10 @@
                             <p>No news updates found.</p>
                         </div>
                     @endif
-
                 </div>
             </div>
         </div>
-            </div>
-        </div>
+
         <div class="section-container">
             <div class="bde-post-list-1766-113 bde-post-list">
                 <div class="bde-isotope-filter-bar">
@@ -246,82 +248,84 @@
                 </div>
 
                 <div class="bde-loop-bottom bde-loop-grid ee-posts ee-posts-grid bde-loop-isotope-bottom ee-posts-isotope" style="position: relative;">
-                 @foreach($newsArticles as $article)
-        <article class="bde-loop-item ee-post" data-filters="{{ $article->filters }}">
-            <a class="bde-loop-item__image-link ee-post-image-link" href="{{ $article->url }}" tabindex="-1">
-                <div class="bde-loop-item__image ee-post-image">
-                    <img width="1200" height="628" 
-                         src="{{ $article->image_path }}" 
-                         class="attachment-full size-full wp-post-image" 
-                         alt="{{ $article->title }}" 
-                         decoding="async">
+                    @if(isset($newsArticles) && count($newsArticles) > 0)
+                        @foreach($newsArticles as $article)
+                            <article class="bde-loop-item ee-post" data-filters="{{ $article->filters ?? 'all' }}">
+                                <a class="bde-loop-item__image-link ee-post-image-link" href="{{ $article->url ?? '/posts/'.$article->id }}" tabindex="-1">
+                                    <div class="bde-loop-item__image ee-post-image">
+                                        <img width="1200" height="628" 
+                                            src="{{ $article->image ? asset('storage/' . $article->image) : 'https://esports.org.sg/wp-content/uploads/2026/05/Asian-Games-Qualifiers-PR-Banner.webp' }}" 
+                                            class="attachment-full size-full wp-post-image" 
+                                            alt="{{ $article->title }}" 
+                                            decoding="async">
+                                    </div>
+                                </a>
+                                <div class="bde-loop-item__wrap ee-post-wrap">
+                                    <h3 class="ee-post-title">
+                                        <a class="bde-loop-item__title-link ee-post-title-link" href="{{ $article->url ?? '/posts/'.$article->id }}">
+                                            {{ $article->title }}
+                                        </a>
+                                    </h3>
+                                    <div class="bde-loop-item__post-meta ee-post-meta">
+                                        <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">
+                                            {{ $article->author ?? 'Author' }}
+                                        </span>
+                                        <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
+                                            {{ $article->published_date ? \Carbon\Carbon::parse($article->published_date)->format('F d, Y') : 'Date' }}
+                                        </span>
+                                    </div>
+                                    <div class="bde-loop-item__content ee-post-content">
+                                        {{ Str::limit($article->content ?? $article->body, 120, '...') }}
+                                    </div>
+                                    <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="{{ $article->url ?? '/posts/'.$article->id }}">
+                                        <span class="button-atom__text">Read more</span>
+                                    </a>
+                                </div>
+                            </article>
+                        @endforeach 
+                    @endif  
                 </div>
-            </a>
-            <div class="bde-loop-item__wrap ee-post-wrap">
-                <h3 class="ee-post-title">
-                    <a class="bde-loop-item__title-link ee-post-title-link" href="{{ $article->url }}">
-                        {{ $article->title }}
-                    </a>
-                </h3>
-                <div class="bde-loop-item__post-meta ee-post-meta">
-                    <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">
-                        {{ $article->author }}
-                    </span>
-                    <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
-                        {{ \Carbon\Carbon::parse($article->published_date)->format('F d, Y') }}
-                    </span>
-                </div>
-                <div class="bde-loop-item__content ee-post-content">
-                    {{ $article->content }}
-                </div>
-                <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="{{ $article->url }}">
-                    <span class="button-atom__text">Read more</span>
-                </a>
             </div>
-        </article>
-    @endforeach   
-                    
-                
         </div>
     </section>
 
-
     <footer class="bde-section-1747-100 bde-section">
-                <div class="section-container">
-                    <div class="bde-columns-1747-101 bde-columns">
-                        <div class="bde-column-1747-102 bde-column">
-                            <div class="bde-text-1747-103 bde-text">
-                                © 2026 E-sport Federation Cambodia. All rights reserved.
-                            </div>
-                        </div>
-                        <div class="bde-column-1747-104 bde-column">
-                            <div class="bde-div-1747-115 bde-div">
-                                <div class="bde-social-icons-1747-105 bde-social-icons">
-                                    <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-facebook" href="https://www.facebook.com/efckhmer/" target="_self" data-type="url" aria-label="facebook">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24">
-                                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                                        </svg>
-                                    </a>
-                                    <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-instagram" href="https://www.instagram.com/mplkh.official/" target="_self" data-type="url" aria-label="instagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24">
-                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
-                                        </svg>
-                                    </a>
-                                    <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-linkedin" href="https://www.linkedin.com/in/lun-samedy-a8ba1716a/?isSelfProfile=false" target="_self" data-type="url" aria-label="linkedin">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="-4 -2 32 32">
-                                            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path>
-                                        </svg>
-                                    </a>
-                                    <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-youtube" href="https://www.youtube.com/@Exprez.Esports" target="_blank" aria-label="youtube">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24">
-                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
+        <div class="section-container">
+            <div class="bde-columns-1747-101 bde-columns">
+                <div class="bde-column-1747-102 bde-column">
+                    <div class="bde-text-1747-103 bde-text">
+                        © 2026 E-sport Federation Cambodia. All rights reserved.
+                    </div>
+                </div>
+                <div class="bde-column-1747-104 bde-column">
+                    <div class="bde-div-1747-115 bde-div">
+                        <div class="bde-social-icons-1747-105 bde-social-icons">
+                            <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-facebook" href="https://www.facebook.com/efckhmer/" target="_self" data-type="url" aria-label="facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24">
+                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                                </svg>
+                            </a>
+                            <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-instagram" href="https://www.instagram.com/mplkh.official/" target="_self" data-type="url" aria-label="instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                                </svg>
+                            </a>
+                            <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-linkedin" href="https://www.linkedin.com/in/lun-samedy-a8ba1716a/?isSelfProfile=false" target="_self" data-type="url" aria-label="linkedin">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="-4 -2 32 32">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path>
+                                </svg>
+                            </a>
+                            <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-youtube" href="https://www.youtube.com/@Exprez.Esports" target="_blank" aria-label="youtube">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 <script src="{{ asset('js/thenews.js') }}"></script>
