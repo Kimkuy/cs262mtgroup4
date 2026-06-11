@@ -34,7 +34,10 @@ class MerchandiseSeeder extends Seeder
         ];
 
         foreach ($items as $item) {
-            Merchandise::create($item);
+            Merchandise::updateOrCreate(
+        ['name' => $item['name']], 
+        $item                      
+    );
         }
     }
 }

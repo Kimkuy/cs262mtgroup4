@@ -2,6 +2,7 @@
 @section('content')
 
 <head>
+    <link rel="stylesheet" href="{{ asset('/css/thenews.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Thenews - E-sport Federation Cambodia</title>
@@ -245,101 +246,42 @@
                 </div>
 
                 <div class="bde-loop-bottom bde-loop-grid ee-posts ee-posts-grid bde-loop-isotope-bottom ee-posts-isotope" style="position: relative;">
-                    
-                    <article class="bde-loop-item ee-post" data-filters="108,3">
-                        <a class="bde-loop-item__image-link ee-post-image-link" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/" tabindex="-1">
-                            <div class="bde-loop-item__image ee-post-image">
-                                <img width="1200" height="628" src="https://esports.org.sg/wp-content/uploads/2026/05/Asian-Games-Qualifiers-PR-Banner.webp" class="attachment-full size-full wp-post-image" alt="Singapore to Host Asian Games Esports Events Qualifiers" decoding="async">
-                            </div>
-                        </a>
-                        <div class="bde-loop-item__wrap ee-post-wrap">
-                            <h3 class="ee-post-title">
-                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/">Singapore to Host Asian Games Esports Events Qualifiers</a>
-                            </h3>
-                            <div class="bde-loop-item__post-meta ee-post-meta">
-                                <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">Stephanie Lim</span>
-                                <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">May 25, 2026</span>
-                            </div>
-                            <div class="bde-loop-item__content ee-post-content">
-                                Teams from over 20 Asian nations are heading to Singapore to battle for a spot in the Aichi-Nagoya 2026 Asian Games...
-                            </div>
-                            <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/">
-                                <span class="button-atom__text">Read more</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="bde-loop-item ee-post" data-filters="103">
-                        <a class="bde-loop-item__image-link ee-post-image-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/" tabindex="-1">
-                            <div class="bde-loop-item__image ee-post-image">
-                                <img width="1646" height="926" src="https://esports.org.sg/wp-content/uploads/2026/04/ENG-SNC-Annoucement.psd.webp" class="attachment-full size-full wp-post-image" alt="SEA Esports Nations Cup Launched">
-                            </div>
-                        </a>
-                        <div class="bde-loop-item__wrap ee-post-wrap">
-                            <h3 class="ee-post-title">
-                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/">SEA Esports Nations Cup Launched</a>
-                            </h3>
-                            <div class="bde-loop-item__post-meta ee-post-meta">
-                                <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">Stephanie Lim</span>
-                                <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">April 20, 2026</span>
-                            </div>
-                            <div class="bde-loop-item__content ee-post-content">
-                                Southeast Asia establishes a structured regional framework for National Team Esports...
-                            </div>
-                            <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="https://esports.org.sg/sea-esports-nations-cup-launch/">
-                                <span class="button-atom__text">Read more</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="bde-loop-item ee-post" data-filters="103">
-                        <a class="bde-loop-item__image-link ee-post-image-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/" tabindex="-1">
-                            <div class="bde-loop-item__image ee-post-image">
-                                <img width="1646" height="926" src="https://esports.org.sg/wp-content/uploads/2026/04/ENG-SNC-Annoucement.psd.webp" class="attachment-full size-full wp-post-image" alt="SEA Esports Nations Cup Launched">
-                            </div>
-                        </a>
-                        <div class="bde-loop-item__wrap ee-post-wrap">
-                            <h3 class="ee-post-title">
-                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/">SEA Esports Nations Cup Launched</a>
-                            </h3>
-                            <div class="bde-loop-item__post-meta ee-post-meta">
-                                <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">Stephanie Lim</span>
-                                <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">April 20, 2026</span>
-                            </div>
-                            <div class="bde-loop-item__content ee-post-content">
-                                Southeast Asia establishes a structured regional framework for National Team Esports...
-                            </div>
-                            <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="https://esports.org.sg/sea-esports-nations-cup-launch/">
-                                <span class="button-atom__text">Read more</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="bde-loop-item ee-post" data-filters="103">
-                        <a class="bde-loop-item__image-link ee-post-image-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/" tabindex="-1">
-                            <div class="bde-loop-item__image ee-post-image">
-                                <img width="1646" height="926" src="https://esports.org.sg/wp-content/uploads/2026/04/ENG-SNC-Annoucement.psd.webp" class="attachment-full size-full wp-post-image" alt="SEA Esports Nations Cup Launched">
-                            </div>
-                        </a>
-                        <div class="bde-loop-item__wrap ee-post-wrap">
-                            <h3 class="ee-post-title">
-                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/">SEA Esports Nations Cup Launched</a>
-                            </h3>
-                            <div class="bde-loop-item__post-meta ee-post-meta">
-                                <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">Stephanie Lim</span>
-                                <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">April 20, 2026</span>
-                            </div>
-                            <div class="bde-loop-item__content ee-post-content">
-                                Southeast Asia establishes a structured regional framework for National Team Esports...
-                            </div>
-                            <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="https://esports.org.sg/sea-esports-nations-cup-launch/">
-                                <span class="button-atom__text">Read more</span>
-                            </a>
-                        </div>
-                    </article>
-
+                 @foreach($newsArticles as $article)
+        <article class="bde-loop-item ee-post" data-filters="{{ $article->filters }}">
+            <a class="bde-loop-item__image-link ee-post-image-link" href="{{ $article->url }}" tabindex="-1">
+                <div class="bde-loop-item__image ee-post-image">
+                    <img width="1200" height="628" 
+                         src="{{ $article->image_path }}" 
+                         class="attachment-full size-full wp-post-image" 
+                         alt="{{ $article->title }}" 
+                         decoding="async">
                 </div>
+            </a>
+            <div class="bde-loop-item__wrap ee-post-wrap">
+                <h3 class="ee-post-title">
+                    <a class="bde-loop-item__title-link ee-post-title-link" href="{{ $article->url }}">
+                        {{ $article->title }}
+                    </a>
+                </h3>
+                <div class="bde-loop-item__post-meta ee-post-meta">
+                    <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">
+                        {{ $article->author }}
+                    </span>
+                    <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
+                        {{ \Carbon\Carbon::parse($article->published_date)->format('F d, Y') }}
+                    </span>
+                </div>
+                <div class="bde-loop-item__content ee-post-content">
+                    {{ $article->content }}
+                </div>
+                <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="{{ $article->url }}">
+                    <span class="button-atom__text">Read more</span>
+                </a>
             </div>
+        </article>
+    @endforeach   
+                    
+                
         </div>
     </section>
 
@@ -382,4 +324,5 @@
                 </div>
 
 </body>
+<script src="{{ asset('js/thenews.js') }}"></script>
 @endsection
