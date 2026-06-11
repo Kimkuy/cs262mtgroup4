@@ -27,8 +27,8 @@
 
     <!-- Link to separated custom CSS stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+
 </head>
- 
 <body class="home wp-singular page-template-default page page-id-1737 wp-theme-breakdance-zero breakdance mec-theme-breakdance-zero">
     <svg class="breakdance-global-gradients-sprite" aria-hidden="true">
         <linearGradient x1="0.5" y1="1" x2="0.5" y2="0" id="bde-palette-test-3f7f26dc-ddc1-4240-b5e3-db28e988651c-gradient-10">
@@ -42,7 +42,8 @@
         <div class="bde-header-builder__container">
             <div class="bde-div-1744-101 bde-div">
                 <a href="{{ url('/index') }}" class="flex items-center hover:no-underline px-2 md:px-0">
-                    <img style="height: 3cm; width: 3cm; transform: translate(100px, 2px)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s" alt="EFC Logo">
+                    <img style="height: 3cm; width: 3cm; transform: translate(100px, 2px); border-radius: 50%; mix-blend-mode: multiply;" 
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoFCdWwG2xWtJAGkuXd0Mq7IWz1SJOhO497g&s"alt="EFC Logo">
                 </a>
                 <div class="bde-menu-1744-104 bde-menu">
                     <nav class="breakdance-menu breakdance-menu--collapse breakdance-menu--placement-center breakdance-menu--offcanvas breakdance-menu--offcanvas-right breakdance-menu--effect breakdance-menu--effect-underline breakdance-menu--effect-center breakdance-menu--enabled breakdance-menu--dropdown-accordion">
