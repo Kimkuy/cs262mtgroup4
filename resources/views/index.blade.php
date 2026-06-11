@@ -18,6 +18,7 @@
                     </div>
                     <div class="bde-column-1737-105 bde-column is-animated" data-entrance="slideUp" style="">
         
+                       <div class="container mx-auto px-4 py-10">
                         <div class="bde-rich-text-1737-106 bde-rich-text breakdance-rich-text-styles">
                             <p>The <strong>E-sport Federation Cambodia (EFC)</strong> is a member of the National Olympic Committee of Cambodia (NOCC) and the national governing body for esports in Cambodia. Founded in 2014, EFC promotes and facilitates the participation of Cambodia in regional and international events and competitions in the area of esports excellence, and to develop and promote esports.</p>
                             <div class="textwidget">
@@ -28,6 +29,7 @@
                                 <span class="button-atom__text">Who We Are</span>
                             </a>
                         </div>
+                    </div>
                         <div class="bde-div-1737-108 bde-div">
                             <div class="bde-social-icons-1737-109 bde-social-icons">
                                 <a class="breakdance-link bde-social-icons__icon-wrapper bde-social-icons__icon-facebook" href="https://www.facebook.com/efckhmer/" target="_self" data-type="url" aria-label="facebook">

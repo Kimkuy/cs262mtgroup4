@@ -15,7 +15,7 @@ class UserController extends Controller
         $incomingFields['password'] = bcrypt($incomingFields['password']);
         $user = User::create($incomingFields);
         auth()->login($user);
-        return redirect('/dashboard');
+        return redirect('/');
     }
 
     public function login(Request $request){
@@ -26,7 +26,7 @@ class UserController extends Controller
 
         if(auth()->attempt(['name' => $incomingFields['loginname'], 'password' => $incomingFields['loginpassword']])){
             $request->session()->regenerate();
-            return redirect('/dashboard');
+            return redirect('/');
         }
 
         return back()->withErrors(['loginname' => 'Invalid username or password.']);

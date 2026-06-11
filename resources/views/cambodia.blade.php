@@ -69,6 +69,59 @@
             --mec-fes-main-color-rgba-6: rgba(64, 217, 241, 0.2);
         }
     </style>
+    <style>
+        .bde-loop-grid.ee-posts-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+            gap: 16px !important;
+        }
+        .bde-loop-item.ee-post {
+            padding: 12px !important;
+            font-size: 14px !important;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .bde-loop-item__image.ee-post-image {
+            height: 160px !important;
+            overflow: hidden !important;
+            border-radius: 4px !important;
+        }
+        .bde-loop-item__image.ee-post-image img {
+            height: 100% !important;
+            width: 100% !important;
+            object-fit: cover !important;
+        }
+        .ee-post-wrap {
+            padding-top: 10px !important;
+        }
+        .ee-post-title {
+            font-size: 15px !important;
+            line-height: 1.3 !important;
+            margin: 0 0 6px 0 !important;
+            font-weight: 700 !important;
+        }
+        .bde-loop-item__post-meta.ee-post-meta {
+            font-size: 11px !important;
+            margin-bottom: 8px !important;
+            color: #777 !important;
+        }
+        .bde-loop-item__content.ee-post-content {
+            font-size: 12.5px !important;
+            line-height: 1.4 !important;
+            color: #444 !important;
+            margin-bottom: 12px !important;
+        }
+        .bde-loop-item__button.ee-post-button {
+            padding: 6px 14px !important;
+            font-size: 11.5px !important;
+            height: auto !important;
+            line-height: 1 !important;
+            display: inline-block !important;
+            width: max-content !important;
+        }
+    </style>
+    
     
     <link rel="preload" as="image" href="https://esports.org.sg/wp-content/uploads/2026/01/particle-light-hero.webp" fetchpriority="high">
     <link rel="preload" as="image" href="https://esports.org.sg/wp-content/uploads/2026/01/lionhead-hero.webp" fetchpriority="high">
@@ -114,6 +167,50 @@
                     </div>
                 </div>
                 <h2 class="bde-heading-1766-110 bde-heading">latest news</h2>
+                <div class="bde-loop bde-loop-grid ee-posts ee-posts-grid bde-loop-isotope ee-posts-isotope" style="position: relative;">
+                    
+                    @if(isset($posts) && count($posts) > 0)
+                        @foreach($posts as $post)
+                            <article class="bde-loop-item ee-post" data-filters="{{ $post->category_id ?? 'all' }}">
+                                <a class="bde-loop-item__image-link ee-post-image-link" href="/posts/{{ $post->slug ?? $post->id }}" tabindex="-1">
+                                    <div class="bde-loop-item__image ee-post-image">
+                                        <img width="1200" height="628" src="{{ $post->image ? asset('storage/' . $post->image) : 'https://esports.org.sg/wp-content/uploads/2026/05/Asian-Games-Qualifiers-PR-Banner.webp' }}" class="attachment-full size-full wp-post-image" alt="{{ $post->title }}" decoding="async">
+                                    </div>
+                                </a>
+                                
+                                <div class="bde-loop-item__wrap ee-post-wrap">
+                                    <h3 class="ee-post-title">
+                                        <a class="bde-loop-item__title-link ee-post-title-link" href="/posts/{{ $post->slug ?? $post->id }}">{{ $post->title }}</a>
+                                    </h3>
+                                    
+                                    <div class="bde-loop-item__post-meta ee-post-meta">
+                                        <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">
+                                            {{ $post->user->name ?? 'Author' }}
+                                        </span>
+                                        <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
+                                            {{ $post->created_at ? $post->created_at->format('M d, Y') : 'Date' }}
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="bde-loop-item__content ee-post-content">
+                                        {{ Str::limit($post->content ?? $post->body, 120, '...') }}
+                                    </div>
+                                    
+                                    <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="/posts/{{ $post->slug ?? $post->id }}">
+                                        <span class="button-atom__text">Read more</span>
+                                    </a>
+                                </div>
+                            </article>
+                        @endforeach
+                    @else
+                        <div class="no-posts-message" style="grid-column: 1/-1; text-align: center; color: #888; padding: 40px 0;">
+                            <p>No news updates found.</p>
+                        </div>
+                    @endif
+
+                </div>
+            </div>
+        </div>
             </div>
         </div>
         <div class="section-container">
@@ -148,102 +245,43 @@
                     </div>
                 </div>
 
-                <div class="bde-loop bde-loop-grid ee-posts ee-posts-grid bde-loop-isotope ee-posts-isotope" style="position: relative;">
-                    
-                    <article class="bde-loop-item ee-post" data-filters="108,3">
-                        <a class="bde-loop-item__image-link ee-post-image-link" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/" tabindex="-1">
-                            <div class="bde-loop-item__image ee-post-image">
-                                <img width="1200" height="628" src="https://esports.org.sg/wp-content/uploads/2026/05/Asian-Games-Qualifiers-PR-Banner.webp" class="attachment-full size-full wp-post-image" alt="Singapore to Host Asian Games Esports Events Qualifiers" decoding="async">
-                            </div>
-                        </a>
-                        <div class="bde-loop-item__wrap ee-post-wrap">
-                            <h3 class="ee-post-title">
-                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/">Singapore to Host Asian Games Esports Events Qualifiers</a>
-                            </h3>
-                            <div class="bde-loop-item__post-meta ee-post-meta">
-                                <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">Stephanie Lim</span>
-                                <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">May 25, 2026</span>
-                            </div>
-                            <div class="bde-loop-item__content ee-post-content">
-                                Teams from over 20 Asian nations are heading to Singapore to battle for a spot in the Aichi-Nagoya 2026 Asian Games...
-                            </div>
-                            <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="https://esports.org.sg/identityv-naraka-mlbb-asian-games-qualifiers/">
-                                <span class="button-atom__text">Read more</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="bde-loop-item ee-post" data-filters="103">
-                        <a class="bde-loop-item__image-link ee-post-image-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/" tabindex="-1">
-                            <div class="bde-loop-item__image ee-post-image">
-                                <img width="1646" height="926" src="https://esports.org.sg/wp-content/uploads/2026/04/ENG-SNC-Annoucement.psd.webp" class="attachment-full size-full wp-post-image" alt="SEA Esports Nations Cup Launched">
-                            </div>
-                        </a>
-                        <div class="bde-loop-item__wrap ee-post-wrap">
-                            <h3 class="ee-post-title">
-                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/">SEA Esports Nations Cup Launched</a>
-                            </h3>
-                            <div class="bde-loop-item__post-meta ee-post-meta">
-                                <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">Stephanie Lim</span>
-                                <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">April 20, 2026</span>
-                            </div>
-                            <div class="bde-loop-item__content ee-post-content">
-                                Southeast Asia establishes a structured regional framework for National Team Esports...
-                            </div>
-                            <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="https://esports.org.sg/sea-esports-nations-cup-launch/">
-                                <span class="button-atom__text">Read more</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="bde-loop-item ee-post" data-filters="103">
-                        <a class="bde-loop-item__image-link ee-post-image-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/" tabindex="-1">
-                            <div class="bde-loop-item__image ee-post-image">
-                                <img width="1646" height="926" src="https://esports.org.sg/wp-content/uploads/2026/04/ENG-SNC-Annoucement.psd.webp" class="attachment-full size-full wp-post-image" alt="SEA Esports Nations Cup Launched">
-                            </div>
-                        </a>
-                        <div class="bde-loop-item__wrap ee-post-wrap">
-                            <h3 class="ee-post-title">
-                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/">SEA Esports Nations Cup Launched</a>
-                            </h3>
-                            <div class="bde-loop-item__post-meta ee-post-meta">
-                                <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">Stephanie Lim</span>
-                                <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">April 20, 2026</span>
-                            </div>
-                            <div class="bde-loop-item__content ee-post-content">
-                                Southeast Asia establishes a structured regional framework for National Team Esports...
-                            </div>
-                            <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="https://esports.org.sg/sea-esports-nations-cup-launch/">
-                                <span class="button-atom__text">Read more</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="bde-loop-item ee-post" data-filters="103">
-                        <a class="bde-loop-item__image-link ee-post-image-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/" tabindex="-1">
-                            <div class="bde-loop-item__image ee-post-image">
-                                <img width="1646" height="926" src="https://esports.org.sg/wp-content/uploads/2026/04/ENG-SNC-Annoucement.psd.webp" class="attachment-full size-full wp-post-image" alt="SEA Esports Nations Cup Launched">
-                            </div>
-                        </a>
-                        <div class="bde-loop-item__wrap ee-post-wrap">
-                            <h3 class="ee-post-title">
-                                <a class="bde-loop-item__title-link ee-post-title-link" href="https://esports.org.sg/sea-esports-nations-cup-launch/">SEA Esports Nations Cup Launched</a>
-                            </h3>
-                            <div class="bde-loop-item__post-meta ee-post-meta">
-                                <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">Stephanie Lim</span>
-                                <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">April 20, 2026</span>
-                            </div>
-                            <div class="bde-loop-item__content ee-post-content">
-                                Southeast Asia establishes a structured regional framework for National Team Esports...
-                            </div>
-                            <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="https://esports.org.sg/sea-esports-nations-cup-launch/">
-                                <span class="button-atom__text">Read more</span>
-                            </a>
-                        </div>
-                    </article>
-
+                <div class="bde-loop-bottom bde-loop-grid ee-posts ee-posts-grid bde-loop-isotope-bottom ee-posts-isotope" style="position: relative;">
+                 @foreach($newsArticles as $article)
+        <article class="bde-loop-item ee-post" data-filters="{{ $article->filters }}">
+            <a class="bde-loop-item__image-link ee-post-image-link" href="{{ $article->url }}" tabindex="-1">
+                <div class="bde-loop-item__image ee-post-image">
+                    <img width="1200" height="628" 
+                         src="{{ $article->image_path }}" 
+                         class="attachment-full size-full wp-post-image" 
+                         alt="{{ $article->title }}" 
+                         decoding="async">
                 </div>
+            </a>
+            <div class="bde-loop-item__wrap ee-post-wrap">
+                <h3 class="ee-post-title">
+                    <a class="bde-loop-item__title-link ee-post-title-link" href="{{ $article->url }}">
+                        {{ $article->title }}
+                    </a>
+                </h3>
+                <div class="bde-loop-item__post-meta ee-post-meta">
+                    <span class="bde-loop-item__meta-item bde-loop-item__meta-author ee-post-meta-author ee-post-meta-item">
+                        {{ $article->author }}
+                    </span>
+                    <span class="bde-loop-item__meta-date bde-loop-item__meta-item ee-post-meta-date ee-post-meta-item">
+                        {{ \Carbon\Carbon::parse($article->published_date)->format('F d, Y') }}
+                    </span>
+                </div>
+                <div class="bde-loop-item__content ee-post-content">
+                    {{ $article->content }}
+                </div>
+                <a class="breakdance-link button-atom button-atom--primary bde-loop-item__button ee-post-button" href="{{ $article->url }}">
+                    <span class="button-atom__text">Read more</span>
+                </a>
             </div>
+        </article>
+    @endforeach   
+                    
+                
         </div>
     </section>
 
