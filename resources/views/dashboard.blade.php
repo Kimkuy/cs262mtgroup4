@@ -223,9 +223,9 @@
                 <h3>{{ auth()->user()->name }}</h3>
                 <p>{{ auth()->user()->email }}</p>
             </div>
-            
         </div>
         @endauth
+
         @if(isset($posts) && count($posts) > 0)
             <div class="section-label">// active management</div>
             <div class="section-title">Your Content Feed</div>
@@ -233,7 +233,12 @@
             @foreach($posts as $postItem)
                 <div class="custom-post-card">
                     <div class="d-flex justify-content-between align-items-center mb-1">
-                        <h4 class="h6 fw-bold text-dark m-0">{{ $postItem->title }}</h4>
+                        <div>
+                            <h4 class="h6 fw-bold text-dark m-0 d-inline-block">{{ $postItem->title }}</h4>
+                            <span class="badge ms-2" style="font-size: 0.65rem; background-color: #001f54; color: #e0b13d; border: 1px solid #e0b13d;">
+                                {{ ucfirst($postItem->news_type ?? 'cambodia') }}
+                            </span>
+                        </div>
                         @auth
                             <a href="/edit-post/{{ $postItem->id }}" class="btn-inline-edit">
                                 <i class="bi bi-pencil-square"></i> Edit
@@ -275,7 +280,14 @@
                     <div class="mb-2">
                         <textarea name="body" 
                                   class="form-control-custom area-content" 
-                                  placeholder="What's on your mind? Share news, updates..."></textarea>
+                                  placeholder="What's on your mind? Share news, updates...">{{ old('body') }}</textarea>
+                    </div>
+
+                    <div class="mb-2">
+                        <select name="news_type" class="form-control-custom" style="cursor: pointer;">
+                            <option value="cambodia" {{ old('news_type') == 'cambodia' ? 'selected' : '' }}>Target Destination: Cambodia Feed</option>
+                            <option value="global" {{ old('news_type') == 'global' ? 'selected' : '' }}>Target Destination: Global Feed</option>
+                        </select>
                     </div>
 
                     <div class="mb-3">

@@ -12,11 +12,13 @@ class PostController extends Controller
             'title' => 'required',
             'body' => 'required',
             'image' => 'nullable|image|max:2048',
+            'news_type' => 'required|in:cambodia,global',
         ]);
 
         $incomingFields['title'] = strip_tags($incomingFields['title']);
         $incomingFields['body'] = strip_tags($incomingFields['body']);
         $incomingFields['user_id'] = auth()->id(); 
+        $incomingFields['news_type'] = $incomingFields['news_type'];
 
         if ($request->hasFile('image')) {
         $incomingFields['image'] = $request->file('image')->store('post-images', 'public');
@@ -68,6 +70,6 @@ class PostController extends Controller
 public function showTheNews() {
     $posts = Post::latest()->get(); 
     
-    return view('thenews', compact('posts'));
+    return view('cambodia', compact('posts'));
 }
 }
