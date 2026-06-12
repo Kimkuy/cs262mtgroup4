@@ -106,41 +106,41 @@
                             <li class="breakdance-menu-item-1744-109 breakdance-menu-item">
                                 <a class="breakdance-link breakdance-menu-link" href="{{ url('/merchandise') }}" target="_self" data-type="url">Merchandise</a>
                             </li>
-                                        <li class="bde-menu-dropdown-1744-110 bde-menu-dropdown breakdance-menu-item">
-                <div class="breakdance-dropdown">
-                    <div class="breakdance-dropdown-toggle">
-                        <button class="breakdance-menu-link" type="button" aria-expanded="false" aria-controls="dropdown-110">The News</button>
-                        <button class="breakdance-menu-link-arrow" type="button" aria-expanded="false" aria-controls="dropdown-110" aria-label="The News Submenu"></button>
-                    </div>
-                    <div class="breakdance-dropdown-floater" aria-hidden="true" id="dropdown-110">
-                        <div class="breakdance-dropdown-body">
-                            <div class="breakdance-dropdown-section">
-                                <div class="breakdance-dropdown-columns">
-                                    <div class="breakdance-dropdown-column">
-                                        <ul class="breakdance-dropdown-links">
-                                            <li class="breakdance-dropdown-item">
-                                                <a class="breakdance-link breakdance-dropdown-link" href="{{ url('/thenews/cambodia') }}" target="_self" data-type="url">
-                                                    <span class="breakdance-dropdown-link__label">
-                                                        <span class="breakdance-dropdown-link__text">Cambodia</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="breakdance-dropdown-item">
-                                                <a class="breakdance-link breakdance-dropdown-link" href="{{ url('/thenews/global') }}" target="_self" data-type="url">
-                                                    <span class="breakdance-dropdown-link__label">
-                                                        <span class="breakdance-dropdown-link__text">Global</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                           <li class="bde-menu-dropdown-1744-110 bde-menu-dropdown breakdance-menu-item">
+                                <div class="breakdance-dropdown">
+                                    <div class="breakdance-dropdown-toggle">
+                                        <button class="breakdance-menu-link" type="button" aria-expanded="false" aria-controls="dropdown-110">The News</button>
+                                        <button class="breakdance-menu-link-arrow" type="button" aria-expanded="false" aria-controls="dropdown-110" aria-label="The News Submenu"></button>
+                                    </div>
+                                    <div class="breakdance-dropdown-floater" aria-hidden="true" id="dropdown-110">
+                                        <div class="breakdance-dropdown-body">
+                                            <div class="breakdance-dropdown-section">
+                                                <div class="breakdance-dropdown-columns">
+                                                    <div class="breakdance-dropdown-column">
+                                                        <ul class="breakdance-dropdown-links">
+                                                            <li class="breakdance-dropdown-item">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="{{ url('/thenews/cambodia') }}" target="_self" data-type="url">
+                                                                    <span class="breakdance-dropdown-link__label">
+                                                                        <span class="breakdance-dropdown-link__text">Cambodia</span>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="breakdance-dropdown-item">
+                                                                <a class="breakdance-link breakdance-dropdown-link" href="{{ url('/thenews/global') }}" target="_self" data-type="url">
+                                                                    <span class="breakdance-dropdown-link__label">
+                                                                        <span class="breakdance-dropdown-link__text">Global</span>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="breakdance-dropdown-caret"></span>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <span class="breakdance-dropdown-caret"></span>
-                    </div>
-                </div>
-            </li>
+                            </li>
                             <li class="bde-menu-dropdown-1744-107 bde-menu-dropdown breakdance-menu-item">
                                 <div class="breakdance-dropdown">
                                     <div class="breakdance-dropdown-toggle">
@@ -243,7 +243,7 @@
     <div style="
         width: 32px; height: 32px;
         border-radius: 50%;
-        background: #f80808;
+        background: #d60606;
         color: #eff1f5;
         display: flex;
         align-items: center;
