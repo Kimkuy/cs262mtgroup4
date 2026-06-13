@@ -12,6 +12,7 @@
                 justify-content: center
             }
 
+            
             .breakdance .bde-section-1755-100 {
                 background-image: url(https://cdn.antaranews.com/cache/1200x800/2023/03/10/80BE2668-EA5C-4500-B270-1C5E60789ACF.jpeg);
                 background-size: cover;
